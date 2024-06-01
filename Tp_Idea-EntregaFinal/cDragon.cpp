@@ -98,7 +98,7 @@ string cDragon::toString() const
 	string defensa = MiDefensa ? MiDefensa->GetMyEstrategia() : "Sin estrategia de defensa";//por si son nullptr
 	string ataque = MiAtaque ? MiAtaque->GetMyEstrategia() : "Sin estrategia de ataque";
 	return "Nombre: " + Nombre_dragon + "\n"
-		+ "Tamaño: " + Taman_dragon + "\n"
+		+ "Tamanio: " + Taman_dragon + "\n"
 		+ "Color: " + Color_dragon + "\n"
 		+ "Estado: " + estado + "\n"
 		+ "Defensa: " + defensa + "\n"

@@ -16,6 +16,31 @@ void cVikingo::ContratarVikingo(string Trabajo)//lo contratan
 	cout << Nombre_vikingo <<"ha conseguido el trabajo como " << Posicion_vikingo << endl;
 }
 
+string cVikingo::toString()
+{
+	string resultado;
+	switch (ResultadoEntrenamiento)
+	{
+	case APROBADO:
+		resultado = "Aprobado";
+		break;
+	case PRIMERO:
+		resultado = "Primero";
+		break;
+	case ULTIMO:
+		resultado = "Ultimo";
+		break;
+	default:
+		break;
+	}
+	return "Nombre del Vikingo: "+Nombre_vikingo+
+		"\nApellido: "+Apellido_vikingo+
+		"\nTrabaja en: "+Posicion_vikingo+
+		"\nCantidad de vida: "+to_string(MagnitudVida)+
+		"\nCantidad de muertes asociadas: "+to_string(cantMuertes_Asociadas)+
+		"\nResultado de Entrenamiento con Bocon: "+resultado;
+}
+
 cVikingo::~cVikingo()
 {
 }

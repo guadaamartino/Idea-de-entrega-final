@@ -17,6 +17,7 @@ public:
 	//string LeerPosicion();
 	void ContratarVikingo(string Trabajo);//Trabajar: qué posición ocupa en la isla de Berk
 	// void AtacarDragones(cDragon* dragoncitoamatar);
+	string toString();
 	~cVikingo();
 };
 

@@ -34,6 +34,7 @@ public:
     int IfJineteDomo();
     cDragon* devolver_PrimerDragon();
     cDragon* devolver_SegundoDragon();
+    string toString();
 
 };
 

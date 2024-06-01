@@ -106,5 +106,21 @@ cDragon* cJinete::devolver_SegundoDragon()
     return dragoncito2;
 }
 
+string cJinete::toString()
+{
+    string dragondomado1 = (dragoncito1 != nullptr) ? dragoncito1->LeerNombreNuevo(): "Ningun dragon domado";
+    string dragondomado2 = (dragoncito2 != nullptr) ? dragoncito2->LeerNombreNuevo() : "No hay segundo dragon domado";
+    string resultado = (resultadoEnEntrenamiento == NO_ASISTIO) ? "No asistio" : "Desaprobado";
+
+    return "Nombre: "+nombre_jinete+
+        "\nApellido: "+apellido_jinete+
+        "\nApodo: "+apodo_jinete+
+        "\nFecha de Nacimiento: "+FechaNacimiento_jinete+
+        "\nCaracteristicas fisicas: "+Carac_fisicas+
+        "\nResultado Entrenamiento: "+resultado+
+        "\n1 Dragon domado: "+dragondomado1+
+        "\n2 Dragon domado: "+dragondomado2;
+}
+
 
 cJinete::~cJinete() {}
