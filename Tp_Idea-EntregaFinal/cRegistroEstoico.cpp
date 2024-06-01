@@ -1,1 +1,0 @@
-#include "cRegistroEstoico.h"
