@@ -14,11 +14,11 @@ int main() {
     std::cout << "Como Entrenar a tu Dragon." << std::endl;
     std::cout << "Buscando mas jugadores..." << std::endl;
     getchar();
-    std::cout << "100% Cargado.Imprima enter para iniciar el juego" << std::endl;
+    std::cout << "100% Cargado"<<std::endl<<"Imprima enter para iniciar el juego" << std::endl;
    
     cRegistroEstoico* Isla_Berk = new cRegistroEstoico();
 
-    //1 dragon
+    // dragones
     cEntrenamiento* ataque1 = new cFormadeAtaque();
     cEntrenamiento* defensa1 = new cFormaDefensa();
     ataque1->SetMyEstrategia("fuego");
@@ -30,12 +30,10 @@ int main() {
         dragoncito1->setEstrategiaAtaque(ataque1);
         dragoncito1->setEstrategiaDefensa(defensa1);
     }
-    catch (const exception& e) {
-        cerr << e.what() << endl;
+    catch (const exception* e) {
+        cerr << e->what() << endl;
     }
     
-   
-    //2 dragon 
     cEntrenamiento* ataque2 = new cFormadeAtaque();
     cEntrenamiento* defensa2 = new cFormaDefensa();
     ataque2->SetMyEstrategia("hielo");
@@ -44,44 +42,52 @@ int main() {
     dragoncito2->AltaNombre("Nadar", "dibujar");
     dragoncito2->SetEstadoDragon(0);//no esta domado
     
-    //1 jinete 
-    cJinete* jinete1 = new cJinete("Hiccup","Horrendous Haddock III","Hipo","4/2/1010","Ojos verdes",DESAPROBADO);
+    // jinetes
+    cJinete* jinete1 = new cJinete("Hiccup","Horrendous Haddock III","Hipo","4/2/1010","Ojos verdes",DESAPROBADO); //unico jinete en principio
     jinete1->incorporarPrimerDragon(dragoncito1);
 
-    //1 vikingo 
-    cVikingo* vikingo1 = new cVikingo("Estoico","el Vasto",60000,PRIMERO);
+    // vikingos 
+    cVikingo* vikingo1 = new cVikingo("Estoico","el Vasto",60000,PRIMERO, "Escudo de metal");
+    cVikingo* vikingo2 = new cVikingo("Patan","Jorgenson",40000,ULTIMO, "Capa termica");
+    cVikingo* vikingo3 = new cVikingo("Astrid", "Hofferson", 60000, ENTRENANDO,"Traje impermeable");
+    cVikingo* vikingo4 = new cVikingo("Brutacio", "Thorston",30000 ,ULTIMO, "Arnes");
+    cVikingo* vikingo5= new cVikingo("Brusca", "Thorston",32000 ,APROBADO, "Gafas antidestellos");
+    cVikingo* vikingo6 = new cVikingo("Fishlegs", "Ingerman",60000 ,ENTRENANDO, "Botas amortiguadas");
 
     //cargo en isla
     Isla_Berk->CargarDragon(dragoncito1);
     Isla_Berk->CargarDragon(dragoncito2);
     Isla_Berk->CargarJinete(jinete1);
     Isla_Berk->CargarVikingo(vikingo1);
+    Isla_Berk->CargarVikingo(vikingo2);
+    Isla_Berk->CargarVikingo(vikingo3);
 
-    
     getchar();
+    //comienza la historia
     std::cout << "----------------------------------------------Bienvenido/a a la isla de Berk--------------------------------------------" << std::endl;
     getchar();
-    std::cout << "Esta isla esta conformada por " << std::endl; //leer ciudadanos (lista jinetes y lista vikingos) (metodo to string)
+    std::cout << "Esta isla esta conformada por " << std::endl; //leer ciudadanos (lista jinetes y lista vikingos) 
     Isla_Berk->ListarJinetes();
     Isla_Berk->ListarVikingos();
     getchar();
-    std::cout << "Hemos detectado el ingreso de dragones a la isla. Ellos son: " << std::endl;//leer dragones (solo no domados)
+    std::cout << "Hemos detectado el ingreso de dragones a la isla. Ellos son: " << std::endl;//leer dragones (solo no domados q son los que van a luchar)
     Isla_Berk->ListarDragonesNODOMADOS();
     getchar();
     std::cout << "Vikingos a proteger la isla de Berk!" << std::endl;
-
-    //llamar a la funcion de guerra entre vikingos y dragones no domados.Agregar en esa funcion --> "comienza la guerra"
+    Isla_Berk->GuerraDragonesVikingos();
+    
     getchar();
     std::cout << "Ha finalizado la guerra..." << std::endl << "Estos vikingos han sobrevivido:" << std::endl;// leer nuevamente lista de vikingos actualizada
-   
+    Isla_Berk->ListarVikingos();
     getchar();
     std::cout << "Hipo: Papa,No te das cuenta que estas guerras hacen mucho danio? Debemos unirnos con los dragones!" << std::endl;
     getchar();
     std::cout << "Estoico: Hipo, mira lo que han ocasionado tus amigos. Hemos perdido comida y amigos. No hay forma que me una a ellos" << std::endl;
     getchar();
     std::cout << "Lastimosamente hipo no ha convencido a su padre, pero... nuevos jinetes han aparecido para sumarse con Hipo!" << std::endl;
-    //agregar jinetes nuevos y domar a dragones.
-    //astrid y patapez
+    
+    //dos vikingos deben pasarse a jinetes y domar a dragones.
+    
     getchar();
     std::cout << "Hipo: Gracias " <<"y "<<"por unirse conmigo "<<std::endl;
     
@@ -121,17 +127,20 @@ int main() {
     
     
     
-  // Liberar la memoria de los entrenamientos 
+  //Libero la memoria de los entrenamientos 
    delete ataque1;
    delete defensa1;
    delete ataque2;
    delete defensa2;
-  //libero del dragon
+  //Libero del dragon
    delete dragoncito1;
    delete dragoncito2;
-  //librero jinetes
+  //Librero jinetes
    delete jinete1;
-  //libero isla
-
+  //Libero vikingos
+   delete vikingo1;
+   delete vikingo2;
+  //Libero isla
+   delete Isla_Berk;
     return 0;
 }

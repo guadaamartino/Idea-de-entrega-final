@@ -4,6 +4,7 @@
 #include "cEntrenamiento.h"
 #include "cFormadeAtaque.h"
 #include "cFormaDefensa.h"
+#include <ctime>
 using namespace std;
 class cDragon
 {
@@ -40,12 +41,19 @@ public:
 	//leer mis estrategias
 	void mostrarEstrategias() const;
 
-	//leer caracteristica de cada derivada 
-	virtual string MostrarCaracteristica() { return " "; }
 	
-	//leer debilidad de cada derivada
-	virtual string MostrarDebilidad() { return " "; }
 
+	//leer vidatotal
+	int leerVidaTotal() { return VidaTotal; }
+
+	//leer caracteristica de cada derivada 
+	virtual string MostrarCaracteristica() { return ""; }
+
+	//leer debilidad de cada derivada
+	virtual string MostrarDebilidad() { return ""; };
+
+	//recibir golpe
+	int ReciboDanio();
 	//metodo to_string
 	string toString() const;
 

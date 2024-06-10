@@ -5,7 +5,7 @@ cJinete::cJinete(string nombre, string apellido, string apodo, string fecha_naci
 {
     nombre_jinete = nombre;
     apellido_jinete = apellido;
-    apellido_jinete = apodo;
+    apodo_jinete = apodo;
     Carac_fisicas = caracteristicas;
     resultadoEnEntrenamiento = certificado;
     dragoncito1 = nullptr;

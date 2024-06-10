@@ -27,6 +27,10 @@ public:
     //eliminar de las listas. REEMPLAZAR POR SOBRECARGA -
     void Quitar_dragon(cDragon* quito_dragon);
     void Quitar_jinete(cJinete* quito_jinete);
+
+    //guerras
+    void GuerraEntreDragones();
+    void GuerraDragonesVikingos();
     
     ~cRegistroEstoico();
 

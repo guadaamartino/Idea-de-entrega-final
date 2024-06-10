@@ -1,6 +1,6 @@
 #include "cVikingo.h"
 
-cVikingo::cVikingo(string Nombre, string Apellido, int Magnitud, Resul certificado)//por defecto por parametros
+cVikingo::cVikingo(string Nombre, string Apellido, int Magnitud, Resul certificado, string elementoPP)//por defecto por parametros
 {
 	Nombre_vikingo = Nombre;
 	Apellido_vikingo = Apellido;
@@ -8,12 +8,25 @@ cVikingo::cVikingo(string Nombre, string Apellido, int Magnitud, Resul certifica
 	MagnitudVida = Magnitud;
 	cantMuertes_Asociadas = -1; //Negativo pq no mato a ningun dragon aun
 	ResultadoEntrenamiento = certificado;
+	ElementoPP = elementoPP;
 }
 
 void cVikingo::ContratarVikingo(string Trabajo)//lo contratan
 {
 	Posicion_vikingo = Trabajo;
 	cout << Nombre_vikingo <<"ha conseguido el trabajo como " << Posicion_vikingo << endl;
+}
+
+
+int cVikingo::ReciboDanios()
+{
+	int Golpe = rand() % 10001;
+	MagnitudVida -= Golpe;
+	if (MagnitudVida <= 0)
+		return -1;
+	else 
+	   return 0;
+    
 }
 
 string cVikingo::toString()
@@ -30,12 +43,15 @@ string cVikingo::toString()
 	case ULTIMO:
 		resultado = "Ultimo";
 		break;
+	case ENTRENANDO:
+		resultado = "Sigue entrenando";
 	default:
 		break;
 	}
-	return "Nombre del Vikingo: "+Nombre_vikingo+
-		"\nApellido: "+Apellido_vikingo+
-		"\nTrabaja en: "+Posicion_vikingo+
+	string posicion = (Posicion_vikingo == " ") ? "No tiene trabajo aun" : Posicion_vikingo;
+	return "Nombre del Vikingo: " + Nombre_vikingo +
+		"\nApellido: " + Apellido_vikingo +
+		"\nTrabaja en: " +posicion+
 		"\nCantidad de vida: "+to_string(MagnitudVida)+
 		"\nCantidad de muertes asociadas: "+to_string(cantMuertes_Asociadas)+
 		"\nResultado de Entrenamiento con Bocon: "+resultado;

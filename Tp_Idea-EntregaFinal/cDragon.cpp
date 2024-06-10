@@ -46,7 +46,7 @@ void cDragon::setEstrategiaAtaque(cEntrenamiento* newAtaque)
 {
 	if (Estado_dragon == true) {//si esta domado
       
-		cFormadeAtaque* IsAtaque = dynamic_cast<cFormadeAtaque*>(newAtaque);// donde pongo el delete de IsAtaque???
+		cFormadeAtaque* IsAtaque = dynamic_cast<cFormadeAtaque*>(newAtaque);//chequeo que sea ataque
 	  if (IsAtaque != nullptr)
 		  MiAtaque = newAtaque;
 	  else
@@ -62,7 +62,7 @@ void cDragon::setEstrategiaAtaque(cEntrenamiento* newAtaque)
 void cDragon::setEstrategiaDefensa(cEntrenamiento* newDefensa)
 {
 	if (Estado_dragon == true) {//si esta domado
-		cFormaDefensa* IsDefensa= dynamic_cast<cFormaDefensa*>(newDefensa);// donde pongo el delete de IsDefensa???
+		cFormaDefensa* IsDefensa= dynamic_cast<cFormaDefensa*>(newDefensa);//chequeo que sea defensa
 		if (IsDefensa != nullptr)
 			MiDefensa = newDefensa;
 		else
@@ -90,6 +90,18 @@ void cDragon::mostrarEstrategias() const
 	else {
 		cout << "No se ha establecido una estrategia de defensa." << endl;
 	}
+}
+
+int cDragon::ReciboDanio()
+{
+	int GolpeRecibido = rand() % 10001;//entre 0 y 10000
+	VidaTotal -= GolpeRecibido;
+	if (VidaTotal <= 0) 
+		return -1;
+	
+	else if (VidaTotal > 0) 
+		return 0;
+	
 }
 
 string cDragon::toString() const

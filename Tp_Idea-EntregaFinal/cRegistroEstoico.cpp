@@ -77,6 +77,33 @@ void cRegistroEstoico::ListarVikingos()
 	return;
 }
 
+void cRegistroEstoico::GuerraDragonesVikingos()
+{
+	cout << "Comienza la guerra" << endl;
+	
+	list<cDragon*>::iterator itDragones;
+	list<cVikingo*>::iterator itVikingos;
+	for(itVikingos=Vikinguitos.begin();itVikingos!=Vikinguitos.end();itVikingos++){//recorro lista vikingos
+		if (Vikinguitos.size() <= 2)
+			break; //quedan menos de dos vikingos y voy a tener que usarlos
+	  for (itDragones = Dragoncitos.begin(); itDragones != Dragoncitos.end(); itDragones++) {//recorro lista dragones
+		  if (!(*itDragones)->IsDomado()) {//si no esta domado
+			  if ((*itVikingos)->LeerElementoPP() == (*itDragones)->MostrarDebilidad()) {
+				  //el vikingo tiene ventaja
+				 int resul=(*itDragones)->ReciboDanio();
+				 if (resul == -1) 
+					 Dragoncitos.erase(itDragones);// muere dragon  
+			  }
+			  else if ((*itVikingos)->LeerElementoPP() != (*itDragones)->MostrarDebilidad()) {
+				  int resul=(*itVikingos)->ReciboDanios();
+				  if (resul == -1)
+					  Vikinguitos.erase(itVikingos); //muere vikingo
+			  }
+		  }
+	  }
+	}
+}
+
 cRegistroEstoico::~cRegistroEstoico()
 {
 }

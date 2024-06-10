@@ -8,4 +8,4 @@ cDragon_deFuego::cDragon_deFuego(string Tamanio, string Color, int MagnitudVida)
 
 
 string cDragon_deFuego::Caracteristica_Dragon = "lanza fuego";
-string cDragon_deFuego::Debilidad_Dragon = "escudo de metal";
+string cDragon_deFuego::Debilidad_Dragon = "Escudo de metal";
