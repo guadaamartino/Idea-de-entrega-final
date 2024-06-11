@@ -14,6 +14,7 @@ private:
     cDragon* dragoncito2;//dragones domados max 2
 public:
     cJinete(string nombre, string apellido, string apodo, string fecha_nacimiento, string caracteristicas, Resultado certificado);
+    cJinete() {};
     ~cJinete();
     void incorporarPrimerDragon(cDragon* nuevoDragon1);
     void incorporarSegundoDragon(cDragon* nuevoDragon2);

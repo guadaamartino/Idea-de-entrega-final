@@ -18,13 +18,16 @@ public:
     //Trabajar: qué posición ocupa en la isla de Berk
 	void ContratarVikingo(string Trabajo);
 	
-	// leer elemento de proteccion personal 
+	// leer datos 
 	string LeerElementoPP() { return ElementoPP; }
-	
+	string LeerNombre(){ return Nombre_vikingo; }
+	string LeerApellido() { return Apellido_vikingo; }
+	int LeerVida() { return MagnitudVida; }
+	void setMuerteNueva();
 	
 
 	//recibir golpe
-	int ReciboDanios();
+	int ReciboDanios(int Golpe);
 
 	//imprir
 	string toString();

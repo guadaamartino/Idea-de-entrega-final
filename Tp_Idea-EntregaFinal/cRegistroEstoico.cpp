@@ -1,4 +1,5 @@
 #include "cRegistroEstoico.h"
+void AgregarVida(cDragon* dragonacurar) { dragonacurar->SetVidaTotal(20000); }
 
 cRegistroEstoico::cRegistroEstoico()
 {
@@ -77,33 +78,117 @@ void cRegistroEstoico::ListarVikingos()
 	return;
 }
 
+
+/*
+cVikingo* cRegistroEstoico::operator[](int index)
+{
+	if (index > Vikinguitos.size()) {
+		throw new exception("No esta definida la lista en ese punto");
+	}
+	else {
+		int contador = 0;
+		list<cVikingo*>::iterator itVikingos;
+		for (itVikingos = Vikinguitos.begin(); itVikingos != Vikinguitos.end(); itVikingos++) {
+			contador++;
+			if (contador == index) {
+				return *itVikingos;
+			}
+		}
+		if (itVikingos == Vikinguitos.end()) {
+			throw new exception("No se encontro vikingo en esa posicion");
+		}
+	}
+}
+
+*/
+
+
+
 void cRegistroEstoico::GuerraDragonesVikingos()
 {
 	cout << "Comienza la guerra" << endl;
-	
+	srand(time(0));
 	list<cDragon*>::iterator itDragones;
 	list<cVikingo*>::iterator itVikingos;
-	for(itVikingos=Vikinguitos.begin();itVikingos!=Vikinguitos.end();itVikingos++){//recorro lista vikingos
-		if (Vikinguitos.size() <= 2)
-			break; //quedan menos de dos vikingos y voy a tener que usarlos
-	  for (itDragones = Dragoncitos.begin(); itDragones != Dragoncitos.end(); itDragones++) {//recorro lista dragones
+	for(itVikingos=Vikinguitos.begin();itVikingos!=Vikinguitos.end();){//recorro lista vikingos
+		if (Vikinguitos.size() <= 5)
+			break; //quedan menos de cinco vikingos y voy a tener que usarlos
+	  for (itDragones = Dragoncitos.begin(); itDragones != Dragoncitos.end();) {//recorro lista dragones
 		  if (!(*itDragones)->IsDomado()) {//si no esta domado
 			  if ((*itVikingos)->LeerElementoPP() == (*itDragones)->MostrarDebilidad()) {
 				  //el vikingo tiene ventaja
-				 int resul=(*itDragones)->ReciboDanio();
+				  int GolpeRecibido = rand() % 60001;//entre 0 y 10000
+				 int resul=(*itDragones)->ReciboDanio(GolpeRecibido);
 				 if (resul == -1) 
 					 Dragoncitos.erase(itDragones);// muere dragon  
+				     (*itVikingos)->setMuerteNueva();
+					//SALTA ERROR SI MATAN AL DRAGON
 			  }
 			  else if ((*itVikingos)->LeerElementoPP() != (*itDragones)->MostrarDebilidad()) {
-				  int resul=(*itVikingos)->ReciboDanios();
+				  int GolpeRecibido = rand() % 20001;//entre 0 y 10000
+				  int resul=(*itVikingos)->ReciboDanios(GolpeRecibido);
 				  if (resul == -1)
 					  Vikinguitos.erase(itVikingos); //muere vikingo
 			  }
 		  }
+		  ++itDragones;
 	  }
+	  ++itVikingos;
 	}
 }
 
+void cRegistroEstoico::BatallaFinal(cDragon* Reina)
+
+
+{
+	srand(time(0));
+	int acumVidasTotales = 0;
+	list<cDragon*>::iterator itDragones;
+	for (itDragones = Dragoncitos.begin(); itDragones != Dragoncitos.end(); itDragones++) {
+		acumVidasTotales += (*itDragones)->leerVidaTotal();
+	}
+	list<cVikingo*>::iterator itVikingos;
+	for (itVikingos = Vikinguitos.begin(); itVikingos != Vikinguitos.end(); itVikingos++) {
+		acumVidasTotales += (*itVikingos)->LeerVida();
+	}
+
+	while (Reina->leerVidaTotal() >= 0) {
+        int GolpeReina=rand()%50000;
+		int GolpeDelPueblo = rand() % 500000;
+
+		if (GolpeReina >= acumVidasTotales) {
+			//final triste
+			std::cout << "Final Triste. Muerte Verde ha vencido a todos los habitantes." << std::endl;
+			return;
+		}
+		else if(GolpeDelPueblo>=Reina->leerVidaTotal()) {
+			//final feliz
+			Reina->ReciboDanio(GolpeDelPueblo);
+			std::cout << "Final Feliz. Han logrado matar a Muerte Verde" << std::endl;
+			return;
+		}
+	}
+	
+	
+
+	
+}
+
+
+void cRegistroEstoico::RealizarCuracion(cDragon* dragonacurar) {
+	list<cDragon*>::iterator itDragones;
+	for (itDragones = Dragoncitos.begin(); itDragones != Dragoncitos.end(); itDragones++) {
+		if ((*itDragones) == dragonacurar) {//me fijo que este en la lista
+			AgregarVida((*itDragones));
+			return;
+		}
+	}
+	if(itDragones==Dragoncitos.end())
+    {
+	    throw new exception("No se encontro al dragon que se quiere curar");
+	}
+	
+}
 cRegistroEstoico::~cRegistroEstoico()
 {
 }

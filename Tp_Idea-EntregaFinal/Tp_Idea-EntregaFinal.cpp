@@ -38,7 +38,7 @@ int main() {
     cEntrenamiento* defensa2 = new cFormaDefensa();
     ataque2->SetMyEstrategia("hielo");
     defensa2->SetMyEstrategia("velocidad");
-    cDragon* dragoncito2 = new cDragon_deHielo("Mediano", "Verde", 50000);
+    cDragon* dragoncito2 = new cDragon_deHielo("Mediano", "Verde", 1000000);
     dragoncito2->AltaNombre("Nadar", "dibujar");
     dragoncito2->SetEstadoDragon(0);//no esta domado
     
@@ -53,6 +53,12 @@ int main() {
     cVikingo* vikingo4 = new cVikingo("Brutacio", "Thorston",30000 ,ULTIMO, "Arnes");
     cVikingo* vikingo5= new cVikingo("Brusca", "Thorston",32000 ,APROBADO, "Gafas antidestellos");
     cVikingo* vikingo6 = new cVikingo("Fishlegs", "Ingerman",60000 ,ENTRENANDO, "Botas amortiguadas");
+    cVikingo* vikingo7 = new cVikingo("Ragnar", "Lodbrok", 70000, PRIMERO, "Escudo de metal");
+    cVikingo* vikingo8 = new cVikingo("Bjorn", "Ironside", 30000, ULTIMO, "Capa termica");
+    cVikingo* vikingo9 = new cVikingo("Erik ", "Red", 80000, ENTRENANDO, "Traje impermeable");
+    cVikingo* vikingo10 = new cVikingo("Leif", "Erikson", 35000, ULTIMO, "Arnes");
+    cVikingo* vikingo11 = new cVikingo("Olaf", "Hardrada", 39000, APROBADO, "Gafas antidestellos");
+    cVikingo* vikingo12 = new cVikingo("Ingvar", "Stonefist", 750000, ENTRENANDO, "Botas amortiguadas");
 
     //cargo en isla
     Isla_Berk->CargarDragon(dragoncito1);
@@ -61,6 +67,13 @@ int main() {
     Isla_Berk->CargarVikingo(vikingo1);
     Isla_Berk->CargarVikingo(vikingo2);
     Isla_Berk->CargarVikingo(vikingo3);
+    Isla_Berk->CargarVikingo(vikingo4);
+    Isla_Berk->CargarVikingo(vikingo5);
+    Isla_Berk->CargarVikingo(vikingo6);
+    Isla_Berk->CargarVikingo(vikingo7);
+    Isla_Berk->CargarVikingo(vikingo8);
+    Isla_Berk->CargarVikingo(vikingo9);
+    Isla_Berk->CargarVikingo(vikingo10);
 
     getchar();
     //comienza la historia
@@ -86,12 +99,15 @@ int main() {
     getchar();
     std::cout << "Lastimosamente hipo no ha convencido a su padre, pero... nuevos jinetes han aparecido para sumarse con Hipo!" << std::endl;
     
+    
     //dos vikingos deben pasarse a jinetes y domar a dragones.
     
     getchar();
     std::cout << "Hipo: Gracias " <<"y "<<"por unirse conmigo "<<std::endl;
     
     //crear dragona reina
+    cDragon* MuerteVerde = new cDragon("Grande","Verde",10000);
+
     getchar();
     std::cout << "Hipo: Oh no! Los dragones malos estan manejados por una reina... ella es" << std::endl;
     getchar();
@@ -102,16 +118,18 @@ int main() {
     std::cout << "Estoico: Estoy cansado de tus locuras Hipo!" << std::endl;
     getchar();
     std::cout<< " Hipo: Deja que nuestros dragones peleen la proxima vez que nos ataquen y veras." << std::endl;
-    //se suman 3 jinetes 
+    //se suman 2 jinetes 
+
     std::cout << "Hemos detectado el ingreso de dragones a la isla. Ellos son: " << std::endl;  //leer dragones (solo no domados)
+    Isla_Berk->ListarDragonesNODOMADOS();
     getchar();
     std::cout << "Estoico: Retrocedan mis vikingos... Dejemos ver como se defienden los dragones:" << std::endl;
-    //lucha entre dragones domados y no domados
+    //Isla_Berk->GuerraEntreDragones();
     getchar();
     std::cout << "Uno de los dragones ha querido matar a Estoico, pero gracias a Chimuelo ha sobrevivido" << std::endl;
     getchar();
     std::cout<< "Hipo llora por el estado de Chimuelo y pide por favor que lo curen" << std::endl;
-    //llamar a funcion friend curandero de dragon que permite sumar 1000 a la vida del dragon
+    Isla_Berk->RealizarCuracion(dragoncito1); //llamar a funcion friend curandero de dragon que permite sumar 20000 a la vida del dragon
     getchar();
     std::cout << "Estoico: Hipo, lo siento mucho tenias razon... Unamonos en contra de Muerte Verde!" << std:: endl;
 
@@ -120,6 +138,7 @@ int main() {
     std::cout << "Entrenando dragones..." << std::endl;
     getchar();
     std::cout << "Ha llegado la hora, debemos luchar contra Muerte Verde. " << std::endl;
+    Isla_Berk->BatallaFinal(MuerteVerde);
     //listar dragones domados, jinetes y vikingos 
     //funcion que pelea con muerte verde
     //se decide si el final fue lindo o triste.
@@ -135,11 +154,16 @@ int main() {
   //Libero del dragon
    delete dragoncito1;
    delete dragoncito2;
+   delete MuerteVerde;
   //Librero jinetes
    delete jinete1;
   //Libero vikingos
    delete vikingo1;
    delete vikingo2;
+   delete vikingo3;
+   delete vikingo4;
+   delete vikingo5;
+   delete vikingo6;
   //Libero isla
    delete Isla_Berk;
     return 0;

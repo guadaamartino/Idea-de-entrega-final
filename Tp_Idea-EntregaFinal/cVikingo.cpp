@@ -18,9 +18,19 @@ void cVikingo::ContratarVikingo(string Trabajo)//lo contratan
 }
 
 
-int cVikingo::ReciboDanios()
+void cVikingo::setMuerteNueva()
 {
-	int Golpe = rand() % 10001;
+	if (cantMuertes_Asociadas == -1) {
+		cantMuertes_Asociadas = 1; //la primera 
+	}
+	else {
+		cantMuertes_Asociadas++;
+	}
+}
+
+int cVikingo::ReciboDanios(int Golpe)
+{
+	
 	MagnitudVida -= Golpe;
 	if (MagnitudVida <= 0)
 		return -1;

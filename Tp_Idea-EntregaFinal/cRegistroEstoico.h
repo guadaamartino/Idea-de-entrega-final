@@ -24,13 +24,21 @@ public:
     void ListarJinetes();
     void ListarVikingos();
    
+
     //eliminar de las listas. REEMPLAZAR POR SOBRECARGA -
-    void Quitar_dragon(cDragon* quito_dragon);
-    void Quitar_jinete(cJinete* quito_jinete);
+    void operator-(cDragon* quito_dragon);
+    void operator-(cVikingo* quito_vikingo);
+    void operator-(cJinete* quito_jinete);
+
+    
 
     //guerras
     void GuerraEntreDragones();
     void GuerraDragonesVikingos();
+    void BatallaFinal(cDragon* Reina);
+
+    //curadas
+    void RealizarCuracion(cDragon* dragonacurar);
     
     ~cRegistroEstoico();
 

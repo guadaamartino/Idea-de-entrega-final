@@ -41,10 +41,10 @@ public:
 	//leer mis estrategias
 	void mostrarEstrategias() const;
 
-	
-
 	//leer vidatotal
 	int leerVidaTotal() { return VidaTotal; }
+	//set vidatotal
+	void SetVidaTotal(int cant) { VidaTotal += cant; }
 
 	//leer caracteristica de cada derivada 
 	virtual string MostrarCaracteristica() { return ""; }
@@ -53,10 +53,15 @@ public:
 	virtual string MostrarDebilidad() { return ""; };
 
 	//recibir golpe
-	int ReciboDanio();
+	int ReciboDanio(int GolpeRecibido);
 	//metodo to_string
 	string toString() const;
 
+	//operator ==
+	bool operator==(cDragon* otro);
+
+	//curandero para chimuelo
+	friend void AgregarVida(cDragon* dragonacurar);
 	//destructor: Se libera la memoria del dragon
 	virtual ~cDragon() {};
 

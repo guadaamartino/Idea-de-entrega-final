@@ -92,9 +92,9 @@ void cDragon::mostrarEstrategias() const
 	}
 }
 
-int cDragon::ReciboDanio()
+int cDragon::ReciboDanio(int GolpeRecibido)
 {
-	int GolpeRecibido = rand() % 10001;//entre 0 y 10000
+	
 	VidaTotal -= GolpeRecibido;
 	if (VidaTotal <= 0) 
 		return -1;
@@ -116,6 +116,17 @@ string cDragon::toString() const
 		+ "Defensa: " + defensa + "\n"
 		+ "Ataque: " + ataque + "\n"
 		+ "Vida total: " + to_string(VidaTotal);//convierto numero a su cadena de texto equivalente. 
+}
+
+bool cDragon::operator==(cDragon* otro)
+{
+	return Nombre_dragon == otro->Nombre_dragon &&
+		Taman_dragon == otro->Taman_dragon &&
+		Color_dragon == otro->Color_dragon &&
+		Estado_dragon == otro->Estado_dragon &&
+		MiDefensa == otro->MiDefensa && // Aquí se compara la dirección de memoria de MiDefensa
+		MiAtaque == otro->MiAtaque && // Aquí se compara la dirección de memoria de MiAtaque
+		VidaTotal == otro->VidaTotal;
 }
 
 
