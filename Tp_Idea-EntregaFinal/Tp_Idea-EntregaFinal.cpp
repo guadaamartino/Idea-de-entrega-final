@@ -38,7 +38,7 @@ int main() {
     cEntrenamiento* defensa2 = new cFormaDefensa();
     ataque2->SetMyEstrategia("hielo");
     defensa2->SetMyEstrategia("velocidad");
-    cDragon* dragoncito2 = new cDragon_deHielo("Mediano", "Verde", 1000000);
+    cDragon* dragoncito2 = new cDragon_deHielo("Mediano", "Verde", 10);
     dragoncito2->AltaNombre("Nadar", "dibujar");
     dragoncito2->SetEstadoDragon(0);//no esta domado
     

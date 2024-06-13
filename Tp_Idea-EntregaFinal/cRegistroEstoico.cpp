@@ -106,34 +106,55 @@ cVikingo* cRegistroEstoico::operator[](int index)
 
 void cRegistroEstoico::GuerraDragonesVikingos()
 {
+
 	cout << "Comienza la guerra" << endl;
 	srand(time(0));
 	list<cDragon*>::iterator itDragones;
 	list<cVikingo*>::iterator itVikingos;
-	for(itVikingos=Vikinguitos.begin();itVikingos!=Vikinguitos.end();){//recorro lista vikingos
+
+	for (itVikingos = Vikinguitos.begin(); itVikingos != Vikinguitos.end();)
+	{
 		if (Vikinguitos.size() <= 5)
-			break; //quedan menos de cinco vikingos y voy a tener que usarlos
-	  for (itDragones = Dragoncitos.begin(); itDragones != Dragoncitos.end();) {//recorro lista dragones
-		  if (!(*itDragones)->IsDomado()) {//si no esta domado
-			  if ((*itVikingos)->LeerElementoPP() == (*itDragones)->MostrarDebilidad()) {
-				  //el vikingo tiene ventaja
-				  int GolpeRecibido = rand() % 60001;//entre 0 y 10000
-				 int resul=(*itDragones)->ReciboDanio(GolpeRecibido);
-				 if (resul == -1) 
-					 Dragoncitos.erase(itDragones);// muere dragon  
-				     (*itVikingos)->setMuerteNueva();
-					//SALTA ERROR SI MATAN AL DRAGON
-			  }
-			  else if ((*itVikingos)->LeerElementoPP() != (*itDragones)->MostrarDebilidad()) {
-				  int GolpeRecibido = rand() % 20001;//entre 0 y 10000
-				  int resul=(*itVikingos)->ReciboDanios(GolpeRecibido);
-				  if (resul == -1)
-					  Vikinguitos.erase(itVikingos); //muere vikingo
-			  }
-		  }
-		  ++itDragones;
-	  }
-	  ++itVikingos;
+			break; // quedan menos de cinco vikingos y voy a tener que usarlos
+
+		bool vikingoMuerto = false;
+
+		for (itDragones = Dragoncitos.begin(); itDragones != Dragoncitos.end();)
+		{
+			bool dragonMuerto = false;
+
+			if (!(*itDragones)->IsDomado())
+			{
+				if ((*itVikingos)->LeerElementoPP() == (*itDragones)->MostrarDebilidad())
+				{
+					int GolpeRecibido = rand() % 60001; // entre 0 y 60000
+					int resul = (*itDragones)->ReciboDanio(GolpeRecibido);
+					if (resul == -1)
+					{
+						itDragones = Dragoncitos.erase(itDragones); // muere dragón
+						(*itVikingos)->setMuerteNueva();
+						dragonMuerto = true;
+					}
+				}
+				else
+				{
+					int GolpeRecibido = rand() % 20001; // entre 0 y 20000
+					int resul = (*itVikingos)->ReciboDanios(GolpeRecibido);
+					if (resul == -1)
+					{
+						itVikingos = Vikinguitos.erase(itVikingos); // muere vikingo
+						vikingoMuerto = true;
+						break; // salir del bucle de dragones y avanzar al siguiente vikingo
+					}
+				}
+			}
+
+			if (!dragonMuerto)
+				++itDragones;
+		}
+
+		if (!vikingoMuerto)
+			++itVikingos;
 	}
 }
 
