@@ -78,29 +78,57 @@ void cRegistroEstoico::ListarVikingos()
 	return;
 }
 
-
-/*
-cVikingo* cRegistroEstoico::operator[](int index)
+void cRegistroEstoico::operator-(cVikingo* quito_vikingo)
 {
-	if (index > Vikinguitos.size()) {
-		throw new exception("No esta definida la lista en ese punto");
-	}
+	if(quito_vikingo!=nullptr){
+	list<cVikingo*>::iterator itEnVikingos;
+	 for (itEnVikingos = Vikinguitos.begin(); itEnVikingos != Vikinguitos.end(); itEnVikingos++) {
+		//primero chequear si esta  
+		if ((*itEnVikingos)->LeerNombre() == quito_vikingo->LeerNombre()) { //se encuentra
+			Vikinguitos.erase(itEnVikingos);//se elimina
+			return;
+		}
+	 }
+	 if (itEnVikingos == Vikinguitos.end()) {
+		 //llego al final y no lo encontro
+		 throw new exception("Ese vikingo no pertenece a nuestra isla, Lo siento");
+	 }
+    }
 	else {
-		int contador = 0;
-		list<cVikingo*>::iterator itVikingos;
-		for (itVikingos = Vikinguitos.begin(); itVikingos != Vikinguitos.end(); itVikingos++) {
-			contador++;
-			if (contador == index) {
-				return *itVikingos;
-			}
-		}
-		if (itVikingos == Vikinguitos.end()) {
-			throw new exception("No se encontro vikingo en esa posicion");
-		}
+		throw new exception("Se ha pasado algo nulo");
 	}
 }
 
-*/
+void cRegistroEstoico::VikingoAJinete(int index, cJinete* jineteNuevo)
+{
+	if (index <0 || index >= Vikinguitos.size()) {
+		throw new exception("Fuera del rango de la lista de vikingos");
+	}
+	list<cVikingo*>::iterator itViking = Vikinguitos.begin();
+	for (int i = 0; i < index; i++)
+		itViking++;
+
+	cVikingo* vikingo = *itViking;
+
+	//Asigno atributos desde vikingo a jinete
+	jineteNuevo->setNombre(vikingo->LeerNombre());
+	jineteNuevo->setApellido(vikingo->LeerApellido());
+	jineteNuevo->incorporarPrimerDragon(nullptr);
+	jineteNuevo->incorporarSegundoDragon(nullptr);//se asigna desp
+	int Resul = rand() % 2;//entre 0 y 1
+	if(Resul==0)
+	  jineteNuevo->setResultadoEntrenamiento(NO_ASISTIO);
+	else
+	  jineteNuevo->setResultadoEntrenamiento(DESAPROBADO);
+	//el resto seteo en main
+	//Elimino vikingo de la lista 
+	*this - vikingo;
+
+	//Agrego el jinete nuevo
+	Jinetitos.push_back(jineteNuevo);
+
+}
+
 
 
 
@@ -159,8 +187,6 @@ void cRegistroEstoico::GuerraDragonesVikingos()
 }
 
 void cRegistroEstoico::BatallaFinal(cDragon* Reina)
-
-
 {
 	srand(time(0));
 	int acumVidasTotales = 0;
@@ -172,6 +198,7 @@ void cRegistroEstoico::BatallaFinal(cDragon* Reina)
 	for (itVikingos = Vikinguitos.begin(); itVikingos != Vikinguitos.end(); itVikingos++) {
 		acumVidasTotales += (*itVikingos)->LeerVida();
 	}
+
 
 	while (Reina->leerVidaTotal() >= 0) {
         int GolpeReina=rand()%50000;

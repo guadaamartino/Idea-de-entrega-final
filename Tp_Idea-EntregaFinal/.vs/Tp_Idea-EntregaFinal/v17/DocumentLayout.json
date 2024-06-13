@@ -3,8 +3,32 @@
   "WorkspaceRootPath": "C:\\FACU\\SEGUNDO\\Labo Prog 1\\TP DRAGON\\Idea-de-entrega-final\\Tp_Idea-EntregaFinal\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{C54BCA7F-642A-407C-AABC-587F8CA433A4}|Tp_Idea-EntregaFinal.vcxproj|C:\\FACU\\SEGUNDO\\Labo Prog 1\\TP DRAGON\\Idea-de-entrega-final\\Tp_Idea-EntregaFinal\\Tp_Idea-EntregaFinal.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C54BCA7F-642A-407C-AABC-587F8CA433A4}|Tp_Idea-EntregaFinal.vcxproj|solutionrelative:Tp_Idea-EntregaFinal.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C54BCA7F-642A-407C-AABC-587F8CA433A4}|Tp_Idea-EntregaFinal.vcxproj|C:\\FACU\\SEGUNDO\\Labo Prog 1\\TP DRAGON\\Idea-de-entrega-final\\Tp_Idea-EntregaFinal\\cRegistroEstoico.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{C54BCA7F-642A-407C-AABC-587F8CA433A4}|Tp_Idea-EntregaFinal.vcxproj|solutionrelative:cRegistroEstoico.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C54BCA7F-642A-407C-AABC-587F8CA433A4}|Tp_Idea-EntregaFinal.vcxproj|C:\\FACU\\SEGUNDO\\Labo Prog 1\\TP DRAGON\\Idea-de-entrega-final\\Tp_Idea-EntregaFinal\\cJinete.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C54BCA7F-642A-407C-AABC-587F8CA433A4}|Tp_Idea-EntregaFinal.vcxproj|solutionrelative:cJinete.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C54BCA7F-642A-407C-AABC-587F8CA433A4}|Tp_Idea-EntregaFinal.vcxproj|C:\\FACU\\SEGUNDO\\Labo Prog 1\\TP DRAGON\\Idea-de-entrega-final\\Tp_Idea-EntregaFinal\\cRegistroEstoico.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C54BCA7F-642A-407C-AABC-587F8CA433A4}|Tp_Idea-EntregaFinal.vcxproj|solutionrelative:cRegistroEstoico.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C54BCA7F-642A-407C-AABC-587F8CA433A4}|Tp_Idea-EntregaFinal.vcxproj|C:\\FACU\\SEGUNDO\\Labo Prog 1\\TP DRAGON\\Idea-de-entrega-final\\Tp_Idea-EntregaFinal\\cJinete.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C54BCA7F-642A-407C-AABC-587F8CA433A4}|Tp_Idea-EntregaFinal.vcxproj|solutionrelative:cJinete.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C54BCA7F-642A-407C-AABC-587F8CA433A4}|Tp_Idea-EntregaFinal.vcxproj|C:\\FACU\\SEGUNDO\\Labo Prog 1\\TP DRAGON\\Idea-de-entrega-final\\Tp_Idea-EntregaFinal\\cVikingo.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C54BCA7F-642A-407C-AABC-587F8CA433A4}|Tp_Idea-EntregaFinal.vcxproj|solutionrelative:cVikingo.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C54BCA7F-642A-407C-AABC-587F8CA433A4}|Tp_Idea-EntregaFinal.vcxproj|C:\\FACU\\SEGUNDO\\Labo Prog 1\\TP DRAGON\\Idea-de-entrega-final\\Tp_Idea-EntregaFinal\\cDragon.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C54BCA7F-642A-407C-AABC-587F8CA433A4}|Tp_Idea-EntregaFinal.vcxproj|solutionrelative:cDragon.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C54BCA7F-642A-407C-AABC-587F8CA433A4}|Tp_Idea-EntregaFinal.vcxproj|C:\\FACU\\SEGUNDO\\Labo Prog 1\\TP DRAGON\\Idea-de-entrega-final\\Tp_Idea-EntregaFinal\\cDragon.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -15,28 +39,8 @@
       "RelativeMoniker": "D:0:0:{C54BCA7F-642A-407C-AABC-587F8CA433A4}|Tp_Idea-EntregaFinal.vcxproj|solutionrelative:cVikingo.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C54BCA7F-642A-407C-AABC-587F8CA433A4}|Tp_Idea-EntregaFinal.vcxproj|C:\\FACU\\SEGUNDO\\Labo Prog 1\\TP DRAGON\\Idea-de-entrega-final\\Tp_Idea-EntregaFinal\\cVikingo.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{C54BCA7F-642A-407C-AABC-587F8CA433A4}|Tp_Idea-EntregaFinal.vcxproj|solutionrelative:cVikingo.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C54BCA7F-642A-407C-AABC-587F8CA433A4}|Tp_Idea-EntregaFinal.vcxproj|C:\\FACU\\SEGUNDO\\Labo Prog 1\\TP DRAGON\\Idea-de-entrega-final\\Tp_Idea-EntregaFinal\\cDragon_deHielo.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{C54BCA7F-642A-407C-AABC-587F8CA433A4}|Tp_Idea-EntregaFinal.vcxproj|solutionrelative:cDragon_deHielo.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C54BCA7F-642A-407C-AABC-587F8CA433A4}|Tp_Idea-EntregaFinal.vcxproj|C:\\FACU\\SEGUNDO\\Labo Prog 1\\TP DRAGON\\Idea-de-entrega-final\\Tp_Idea-EntregaFinal\\Tp_Idea-EntregaFinal.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{C54BCA7F-642A-407C-AABC-587F8CA433A4}|Tp_Idea-EntregaFinal.vcxproj|solutionrelative:Tp_Idea-EntregaFinal.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C54BCA7F-642A-407C-AABC-587F8CA433A4}|Tp_Idea-EntregaFinal.vcxproj|C:\\FACU\\SEGUNDO\\Labo Prog 1\\TP DRAGON\\Idea-de-entrega-final\\Tp_Idea-EntregaFinal\\cRegistroEstoico.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{C54BCA7F-642A-407C-AABC-587F8CA433A4}|Tp_Idea-EntregaFinal.vcxproj|solutionrelative:cRegistroEstoico.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C54BCA7F-642A-407C-AABC-587F8CA433A4}|Tp_Idea-EntregaFinal.vcxproj|C:\\FACU\\SEGUNDO\\Labo Prog 1\\TP DRAGON\\Idea-de-entrega-final\\Tp_Idea-EntregaFinal\\cDragon.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{C54BCA7F-642A-407C-AABC-587F8CA433A4}|Tp_Idea-EntregaFinal.vcxproj|solutionrelative:cDragon.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C54BCA7F-642A-407C-AABC-587F8CA433A4}|Tp_Idea-EntregaFinal.vcxproj|C:\\FACU\\SEGUNDO\\Labo Prog 1\\TP DRAGON\\Idea-de-entrega-final\\Tp_Idea-EntregaFinal\\cJinete.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{C54BCA7F-642A-407C-AABC-587F8CA433A4}|Tp_Idea-EntregaFinal.vcxproj|solutionrelative:cJinete.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C54BCA7F-642A-407C-AABC-587F8CA433A4}|Tp_Idea-EntregaFinal.vcxproj|C:\\FACU\\SEGUNDO\\Labo Prog 1\\TP DRAGON\\Idea-de-entrega-final\\Tp_Idea-EntregaFinal\\cDragon_deHielo.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -49,10 +53,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{C54BCA7F-642A-407C-AABC-587F8CA433A4}|Tp_Idea-EntregaFinal.vcxproj|C:\\FACU\\SEGUNDO\\Labo Prog 1\\TP DRAGON\\Idea-de-entrega-final\\Tp_Idea-EntregaFinal\\cDragon_deFuego.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{C54BCA7F-642A-407C-AABC-587F8CA433A4}|Tp_Idea-EntregaFinal.vcxproj|solutionrelative:cDragon_deFuego.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C54BCA7F-642A-407C-AABC-587F8CA433A4}|Tp_Idea-EntregaFinal.vcxproj|C:\\FACU\\SEGUNDO\\Labo Prog 1\\TP DRAGON\\Idea-de-entrega-final\\Tp_Idea-EntregaFinal\\cJinete.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{C54BCA7F-642A-407C-AABC-587F8CA433A4}|Tp_Idea-EntregaFinal.vcxproj|solutionrelative:cJinete.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C54BCA7F-642A-407C-AABC-587F8CA433A4}|Tp_Idea-EntregaFinal.vcxproj|C:\\FACU\\SEGUNDO\\Labo Prog 1\\TP DRAGON\\Idea-de-entrega-final\\Tp_Idea-EntregaFinal\\cFormadeAtaque.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -70,13 +70,13 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 6,
               "Title": "cDragon.h",
               "DocumentMoniker": "C:\\FACU\\SEGUNDO\\Labo Prog 1\\TP DRAGON\\Idea-de-entrega-final\\Tp_Idea-EntregaFinal\\cDragon.h",
               "RelativeDocumentMoniker": "cDragon.h",
               "ToolTip": "C:\\FACU\\SEGUNDO\\Labo Prog 1\\TP DRAGON\\Idea-de-entrega-final\\Tp_Idea-EntregaFinal\\cDragon.h",
               "RelativeToolTip": "cDragon.h",
-              "ViewState": "AQIAABgAAAAAAAAAAAAswCwAAAAAAAAA",
+              "ViewState": "AQIAACEAAAAAAAAAAAAswCwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-06-10T16:21:44.61Z",
               "IsPinned": true,
@@ -84,13 +84,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 3,
               "Title": "cRegistroEstoico.h",
               "DocumentMoniker": "C:\\FACU\\SEGUNDO\\Labo Prog 1\\TP DRAGON\\Idea-de-entrega-final\\Tp_Idea-EntregaFinal\\cRegistroEstoico.h",
               "RelativeDocumentMoniker": "cRegistroEstoico.h",
               "ToolTip": "C:\\FACU\\SEGUNDO\\Labo Prog 1\\TP DRAGON\\Idea-de-entrega-final\\Tp_Idea-EntregaFinal\\cRegistroEstoico.h",
               "RelativeToolTip": "cRegistroEstoico.h",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAACUAAAANAAAA",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAACUAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-06-01T22:14:59.729Z",
               "IsPinned": true,
@@ -103,58 +103,71 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Tp_Idea-EntregaFinal.cpp",
+              "DocumentMoniker": "C:\\FACU\\SEGUNDO\\Labo Prog 1\\TP DRAGON\\Idea-de-entrega-final\\Tp_Idea-EntregaFinal\\Tp_Idea-EntregaFinal.cpp",
+              "RelativeDocumentMoniker": "Tp_Idea-EntregaFinal.cpp",
+              "ToolTip": "C:\\FACU\\SEGUNDO\\Labo Prog 1\\TP DRAGON\\Idea-de-entrega-final\\Tp_Idea-EntregaFinal\\Tp_Idea-EntregaFinal.cpp",
+              "RelativeToolTip": "Tp_Idea-EntregaFinal.cpp",
+              "ViewState": "AQIAAJAAAAAAAAAAAAAAAKUAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-01T22:15:54.141Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "cJinete.h",
+              "DocumentMoniker": "C:\\FACU\\SEGUNDO\\Labo Prog 1\\TP DRAGON\\Idea-de-entrega-final\\Tp_Idea-EntregaFinal\\cJinete.h",
+              "RelativeDocumentMoniker": "cJinete.h",
+              "ToolTip": "C:\\FACU\\SEGUNDO\\Labo Prog 1\\TP DRAGON\\Idea-de-entrega-final\\Tp_Idea-EntregaFinal\\cJinete.h",
+              "RelativeToolTip": "cJinete.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-06-01T22:42:53.465Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "cRegistroEstoico.cpp",
               "DocumentMoniker": "C:\\FACU\\SEGUNDO\\Labo Prog 1\\TP DRAGON\\Idea-de-entrega-final\\Tp_Idea-EntregaFinal\\cRegistroEstoico.cpp",
               "RelativeDocumentMoniker": "cRegistroEstoico.cpp",
               "ToolTip": "C:\\FACU\\SEGUNDO\\Labo Prog 1\\TP DRAGON\\Idea-de-entrega-final\\Tp_Idea-EntregaFinal\\cRegistroEstoico.cpp",
               "RelativeToolTip": "cRegistroEstoico.cpp",
-              "ViewState": "AQIAAF4AAAAAAAAAAAAawGoAAAAAAAAA",
+              "ViewState": "AQIAAF4AAAAAAAAAAAAUwGcAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-06-01T22:15:06.776Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
+              "Title": "cJinete.cpp",
+              "DocumentMoniker": "C:\\FACU\\SEGUNDO\\Labo Prog 1\\TP DRAGON\\Idea-de-entrega-final\\Tp_Idea-EntregaFinal\\cJinete.cpp",
+              "RelativeDocumentMoniker": "cJinete.cpp",
+              "ToolTip": "C:\\FACU\\SEGUNDO\\Labo Prog 1\\TP DRAGON\\Idea-de-entrega-final\\Tp_Idea-EntregaFinal\\cJinete.cpp",
+              "RelativeToolTip": "cJinete.cpp",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAEwBkAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-01T22:43:12.319Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "cVikingo.h",
               "DocumentMoniker": "C:\\FACU\\SEGUNDO\\Labo Prog 1\\TP DRAGON\\Idea-de-entrega-final\\Tp_Idea-EntregaFinal\\cVikingo.h",
               "RelativeDocumentMoniker": "cVikingo.h",
               "ToolTip": "C:\\FACU\\SEGUNDO\\Labo Prog 1\\TP DRAGON\\Idea-de-entrega-final\\Tp_Idea-EntregaFinal\\cVikingo.h",
               "RelativeToolTip": "cVikingo.h",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAawBUAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-06-01T23:01:27.684Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "cVikingo.cpp",
-              "DocumentMoniker": "C:\\FACU\\SEGUNDO\\Labo Prog 1\\TP DRAGON\\Idea-de-entrega-final\\Tp_Idea-EntregaFinal\\cVikingo.cpp",
-              "RelativeDocumentMoniker": "cVikingo.cpp",
-              "ToolTip": "C:\\FACU\\SEGUNDO\\Labo Prog 1\\TP DRAGON\\Idea-de-entrega-final\\Tp_Idea-EntregaFinal\\cVikingo.cpp",
-              "RelativeToolTip": "cVikingo.cpp",
-              "ViewState": "AQIAABUAAAAAAAAAAAAAABwAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-06-01T23:01:58.014Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "cDragon_deHielo.h",
-              "DocumentMoniker": "C:\\FACU\\SEGUNDO\\Labo Prog 1\\TP DRAGON\\Idea-de-entrega-final\\Tp_Idea-EntregaFinal\\cDragon_deHielo.h",
-              "RelativeDocumentMoniker": "cDragon_deHielo.h",
-              "ToolTip": "C:\\FACU\\SEGUNDO\\Labo Prog 1\\TP DRAGON\\Idea-de-entrega-final\\Tp_Idea-EntregaFinal\\cDragon_deHielo.h",
-              "RelativeToolTip": "cDragon_deHielo.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-06-10T19:29:55.859Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 7,
               "Title": "cDragon.cpp",
               "DocumentMoniker": "C:\\FACU\\SEGUNDO\\Labo Prog 1\\TP DRAGON\\Idea-de-entrega-final\\Tp_Idea-EntregaFinal\\cDragon.cpp",
               "RelativeDocumentMoniker": "cDragon.cpp",
@@ -162,25 +175,11 @@
               "RelativeToolTip": "cDragon.cpp",
               "ViewState": "AQIAAB4AAAAAAAAAAAAawCoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-06-01T22:29:21.695Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-01T22:29:21.695Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Tp_Idea-EntregaFinal.cpp",
-              "DocumentMoniker": "C:\\FACU\\SEGUNDO\\Labo Prog 1\\TP DRAGON\\Idea-de-entrega-final\\Tp_Idea-EntregaFinal\\Tp_Idea-EntregaFinal.cpp",
-              "RelativeDocumentMoniker": "Tp_Idea-EntregaFinal.cpp",
-              "ToolTip": "C:\\FACU\\SEGUNDO\\Labo Prog 1\\TP DRAGON\\Idea-de-entrega-final\\Tp_Idea-EntregaFinal\\Tp_Idea-EntregaFinal.cpp",
-              "RelativeToolTip": "Tp_Idea-EntregaFinal.cpp",
-              "ViewState": "AQIAABgAAAAAAAAAAAAAACgAAABFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-06-01T22:15:54.141Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "cDragon_deFuego.cpp",
               "DocumentMoniker": "C:\\FACU\\SEGUNDO\\Labo Prog 1\\TP DRAGON\\Idea-de-entrega-final\\Tp_Idea-EntregaFinal\\cDragon_deFuego.cpp",
               "RelativeDocumentMoniker": "cDragon_deFuego.cpp",
@@ -192,19 +191,31 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "cJinete.h",
-              "DocumentMoniker": "C:\\FACU\\SEGUNDO\\Labo Prog 1\\TP DRAGON\\Idea-de-entrega-final\\Tp_Idea-EntregaFinal\\cJinete.h",
-              "RelativeDocumentMoniker": "cJinete.h",
-              "ToolTip": "C:\\FACU\\SEGUNDO\\Labo Prog 1\\TP DRAGON\\Idea-de-entrega-final\\Tp_Idea-EntregaFinal\\cJinete.h",
-              "RelativeToolTip": "cJinete.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAQAAAA",
+              "DocumentIndex": 9,
+              "Title": "cDragon_deHielo.h",
+              "DocumentMoniker": "C:\\FACU\\SEGUNDO\\Labo Prog 1\\TP DRAGON\\Idea-de-entrega-final\\Tp_Idea-EntregaFinal\\cDragon_deHielo.h",
+              "RelativeDocumentMoniker": "cDragon_deHielo.h",
+              "ToolTip": "C:\\FACU\\SEGUNDO\\Labo Prog 1\\TP DRAGON\\Idea-de-entrega-final\\Tp_Idea-EntregaFinal\\cDragon_deHielo.h",
+              "RelativeToolTip": "cDragon_deHielo.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-06-01T22:42:53.465Z"
+              "WhenOpened": "2024-06-10T19:29:55.859Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 8,
+              "Title": "cVikingo.cpp",
+              "DocumentMoniker": "C:\\FACU\\SEGUNDO\\Labo Prog 1\\TP DRAGON\\Idea-de-entrega-final\\Tp_Idea-EntregaFinal\\cVikingo.cpp",
+              "RelativeDocumentMoniker": "cVikingo.cpp",
+              "ToolTip": "C:\\FACU\\SEGUNDO\\Labo Prog 1\\TP DRAGON\\Idea-de-entrega-final\\Tp_Idea-EntregaFinal\\cVikingo.cpp",
+              "RelativeToolTip": "cVikingo.cpp",
+              "ViewState": "AQIAABUAAAAAAAAAAAAAABwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-01T23:01:58.014Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "cDragon_deFuego.h",
               "DocumentMoniker": "C:\\FACU\\SEGUNDO\\Labo Prog 1\\TP DRAGON\\Idea-de-entrega-final\\Tp_Idea-EntregaFinal\\cDragon_deFuego.h",
               "RelativeDocumentMoniker": "cDragon_deFuego.h",
@@ -216,7 +227,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "cDragon_deHielo.cpp",
               "DocumentMoniker": "C:\\FACU\\SEGUNDO\\Labo Prog 1\\TP DRAGON\\Idea-de-entrega-final\\Tp_Idea-EntregaFinal\\cDragon_deHielo.cpp",
               "RelativeDocumentMoniker": "cDragon_deHielo.cpp",
@@ -225,18 +236,6 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-06-10T20:30:39.158Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "cJinete.cpp",
-              "DocumentMoniker": "C:\\FACU\\SEGUNDO\\Labo Prog 1\\TP DRAGON\\Idea-de-entrega-final\\Tp_Idea-EntregaFinal\\cJinete.cpp",
-              "RelativeDocumentMoniker": "cJinete.cpp",
-              "ToolTip": "C:\\FACU\\SEGUNDO\\Labo Prog 1\\TP DRAGON\\Idea-de-entrega-final\\Tp_Idea-EntregaFinal\\cJinete.cpp",
-              "RelativeToolTip": "cJinete.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAmAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-06-01T22:43:12.319Z"
             },
             {
               "$type": "Document",

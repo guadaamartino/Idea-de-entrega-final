@@ -30,7 +30,8 @@ public:
     void operator-(cVikingo* quito_vikingo);
     void operator-(cJinete* quito_jinete);
 
-    
+    //de vikingo a jinete
+    void VikingoAJinete(int index,cJinete* jineteNuevo);
 
     //guerras
     void GuerraEntreDragones();

@@ -23,7 +23,7 @@ public:
     void mostrarResultadoEntrenamiento();
     string LeerNombre();
     string LeerApellido();
-    string  LeerApodo();
+    string LeerApodo();
     string LeerFechaNacimiento();
     string LeerCaracteristicas();
     void setNombre(string nombre);

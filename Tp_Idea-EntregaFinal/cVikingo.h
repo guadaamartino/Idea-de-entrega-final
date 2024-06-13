@@ -3,7 +3,7 @@
 #include <string>
 #include <iostream>
 using namespace std;
-enum Resul { APROBADO, PRIMERO, ULTIMO, ENTRENANDO };//el resto no puede porque sino es jinete 
+enum Resul { APROBADO, PRIMERO, ULTIMO, ENTRENANDO };//el resto no puede porque sino seria jinete 
 class cVikingo
 {
 private:

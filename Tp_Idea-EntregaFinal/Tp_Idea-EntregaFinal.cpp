@@ -99,11 +99,16 @@ int main() {
     getchar();
     std::cout << "Lastimosamente hipo no ha convencido a su padre, pero... nuevos jinetes han aparecido para sumarse con Hipo!" << std::endl;
     
-    
-    //dos vikingos deben pasarse a jinetes y domar a dragones.
+    cJinete* jinete2 = new cJinete();
+    Isla_Berk->VikingoAJinete(1, jinete2);
+
+    //set resto de los atributos y dragones
+    cJinete* jinete3 = new cJinete();
+    Isla_Berk->VikingoAJinete(2, jinete3);
+    //set resto de los atributos y dragones
     
     getchar();
-    std::cout << "Hipo: Gracias " <<"y "<<"por unirse conmigo "<<std::endl;
+    std::cout << "Hipo: Gracias " << jinete2->LeerNombre()<<" y "<<jinete3->LeerNombre()<<" por unirse conmigo "<<std::endl;
     
     //crear dragona reina
     cDragon* MuerteVerde = new cDragon("Grande","Verde",10000);
@@ -157,6 +162,8 @@ int main() {
    delete MuerteVerde;
   //Librero jinetes
    delete jinete1;
+   delete jinete2;
+   delete jinete3;
   //Libero vikingos
    delete vikingo1;
    delete vikingo2;
