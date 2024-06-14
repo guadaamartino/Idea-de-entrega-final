@@ -166,6 +166,41 @@ void cRegistroEstoico::VikingoAJinete(int index, cJinete* jineteNuevo)
 
 
 
+void cRegistroEstoico::GuerraEntreDragones()
+{
+	int AcumDragonesDomados=0, AcumDragonesNODomados=0;
+	list <cDragon*>::iterator itDragones;
+	for (itDragones = Dragoncitos.begin(); itDragones != Dragoncitos.end(); itDragones++) {
+		if ((*itDragones)->IsDomado() ) {
+			AcumDragonesDomados++;
+		}
+		else if (!(*itDragones)->IsDomado()) {
+			AcumDragonesNODomados++;
+		}
+	}
+	if (AcumDragonesDomados >= AcumDragonesNODomados) { //los domados tienen mas entrenamiento 
+		//ganarian los domados (Es LA idea)
+		for (itDragones = Dragoncitos.begin(); itDragones != Dragoncitos.end(); ) {
+			if (!(*itDragones)->IsDomado()) {
+				itDragones = Dragoncitos.erase(itDragones);
+			}
+			else {
+				itDragones++;
+			}
+		}
+		return;
+	}
+	else if (AcumDragonesDomados < AcumDragonesNODomados) {
+		//ganarian los no domados 
+		for (itDragones = Dragoncitos.begin(); itDragones != Dragoncitos.end(); ) {
+			if (!(*itDragones)->IsDomado()) {
+				itDragones = Dragoncitos.erase(itDragones);
+			}
+		}
+		return;
+	}
+}
+
 void cRegistroEstoico::GuerraDragonesVikingos()
 {
 
@@ -232,21 +267,51 @@ void cRegistroEstoico::BatallaFinal(cDragon* Reina)
 	for (itVikingos = Vikinguitos.begin(); itVikingos != Vikinguitos.end(); itVikingos++) {
 		acumVidasTotales += (*itVikingos)->LeerVida();
 	}
+	acumVidasTotales += 1000 * Jinetitos.size();
 
 
 	while (Reina->leerVidaTotal() >= 0) {
         int GolpeReina=rand()%50000;
-		int GolpeDelPueblo = rand() % 500000;
+		int GolpeDelPueblo = rand() % 50000;
 
 		if (GolpeReina >= acumVidasTotales) {
 			//final triste
 			std::cout << "Final Triste. Muerte Verde ha vencido a todos los habitantes." << std::endl;
+			std::cout << "                   __====-_  _-====__" << std::endl;
+			std::cout << "             _--^^^#####//      \\\\#####^^^--_" << std::endl;
+			std::cout << "          _-^##########// (    ) \\\\##########^-_" << std::endl;
+			std::cout << "         -############//  |\\^^/|  \\\\############-" << std::endl;
+			std::cout << "       _/############//   (@::@)   \\\\############\\_" << std::endl;
+			std::cout << "      /#############((     \\\\//     ))#############\\" << std::endl;
+			std::cout << "     -###############\\\\    (oo)    //###############-" << std::endl;
+			std::cout << "    -#################\\\\  / \\// \\  //#################-" << std::endl;
+			std::cout << "   -###################\\\\/  V  \\//###################-" << std::endl;
+			std::cout << "  _#/|##########/\\######(   /\\   )######/\\##########|\\#_" << std::endl;
+			std::cout << " |/ |# /#/\\#/\\/  \\#\\/\\#/\\/  /  \\  /\\/\\#/\\/\\#/\\#/\\ |\\ |\\ " << std::endl;
+			std::cout << "  |/  V   V    V   V    V    V     V    V     V   V   |/" << std::endl;
+			std::cout << "Los sobrevientes fueron:" << endl;
+			cout << Reina->toString() << endl;
 			return;
 		}
 		else if(GolpeDelPueblo>=Reina->leerVidaTotal()) {
 			//final feliz
 			Reina->ReciboDanio(GolpeDelPueblo);
 			std::cout << "Final Feliz. Han logrado matar a Muerte Verde" << std::endl;
+            std::cout << "                   __====-_  _-====__                      \\O/" << std::endl;
+			std::cout << "             _--^^^#####//      \\\\#####^^^--_               |" << std::endl;
+			std::cout << "          _-^##########// (    ) \\\\##########^-_           / \\" << std::endl;
+			std::cout << "         -############//  |\\^^/|  \\\\############-         /   \\" << std::endl;
+			std::cout << "       _/############//   (@::@)   \\\\############\\_" << std::endl;
+			std::cout << "      /#############((     \\\\//     ))#############\\" << std::endl;
+			std::cout << "     -###############\\\\    (oo)    //###############-" << std::endl;
+			std::cout << "    -#################\\\\  / \\// \\  //#################-" << std::endl;
+			std::cout << "   -###################\\\\/  V  \\//###################-" << std::endl;
+			std::cout << "  _#/|##########/\\######(   /\\   )######/\\##########|\\#_" << std::endl;
+			std::cout << " |/ |# /#/\\#/\\/  \\#\\/\\#/\\/  /  \\  /\\/\\#/\\/\\#/\\#/\\ |\\ |\\ " << std::endl;
+			std::cout << "  |/  V   V    V   V    V    V     V    V     V   V   |/" << std::endl;
+			std::cout << "Los sobrevientes fueron:" << endl;
+			ListarCiudadanos();
+			ListarDragones();
 			return;
 		}
 	}

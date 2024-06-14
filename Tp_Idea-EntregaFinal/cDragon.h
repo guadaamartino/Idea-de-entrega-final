@@ -24,7 +24,7 @@ public:
 	
     //alta nombre: estudiadas sus habilidades se le asigna un nombre
 	void AltaNombre(const string& Habilidad1,const string& Habilidad2);
-
+	void AltaNombreReina(string NombreReina);
 	//mostrar ese nombre generado
 	string LeerNombreNuevo();
 

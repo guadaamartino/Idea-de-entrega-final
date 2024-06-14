@@ -16,9 +16,18 @@ public:
     cJinete(string nombre, string apellido, string apodo, string fecha_nacimiento, string caracteristicas, Resultado certificado);
     cJinete() {};
     ~cJinete();
+
+    //asignar atributos 
     void incorporarPrimerDragon(cDragon* nuevoDragon1);
     void incorporarSegundoDragon(cDragon* nuevoDragon2);
     void setResultadoEntrenamiento(Resultado resultado);
+    void setNombre(string nombre);
+    void setApellido(string apellido);
+    void setApodo(string apodo);
+    void setCaracteristicas(string caracteristicas);
+    void setFechadeNacimiento(string fecha_nacimiento);
+   
+    //leer atributos 
     Resultado  LeerResultadoEntrenamiento();
     void mostrarResultadoEntrenamiento();
     string LeerNombre();
@@ -26,11 +35,6 @@ public:
     string LeerApodo();
     string LeerFechaNacimiento();
     string LeerCaracteristicas();
-    void setNombre(string nombre);
-    void setApellido(string apellido);
-    void setApodo(string apodo);
-    void setCaracteristicas(string caracteristicas);
-    void setFechadeNacimiento(string fecha_nacimiento);
     string leerDRAGON(cDragon* dragoncito_asociado);
     int IfJineteDomo();
     cDragon* devolver_PrimerDragon();

@@ -23,6 +23,11 @@ void cDragon::AltaNombre(const string& Habilidad1, const string& Habilidad2) //q
 
 }
 
+void cDragon::AltaNombreReina(string NombreReina)
+{
+	Nombre_dragon = NombreReina;
+}
+
 string cDragon::LeerNombreNuevo()
 {
 	if (Nombre_dragon != " ")
