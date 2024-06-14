@@ -1,2 +1,6 @@
 ﻿  Tp_Idea-EntregaFinal.cpp
+  cRegistroEstoico.cpp
+C:\FACU\SEGUNDO\Labo Prog 1\TP DRAGON\Idea-de-entrega-final\Tp_Idea-EntregaFinal\cRegistroEstoico.cpp(152,12): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
+C:\FACU\SEGUNDO\Labo Prog 1\TP DRAGON\Idea-de-entrega-final\Tp_Idea-EntregaFinal\cRegistroEstoico.cpp(204,12): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
+  Generando código...
   Tp_Idea-EntregaFinal.vcxproj -> C:\FACU\SEGUNDO\Labo Prog 1\TP DRAGON\Idea-de-entrega-final\Tp_Idea-EntregaFinal\x64\Debug\Tp_Idea-EntregaFinal.exe

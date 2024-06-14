@@ -23,6 +23,8 @@ public:
     void ListarDragones();
     void ListarJinetes();
     void ListarVikingos();
+    void ListarCiudadanos();
+
    
 
     //eliminar de las listas. REEMPLAZAR POR SOBRECARGA -

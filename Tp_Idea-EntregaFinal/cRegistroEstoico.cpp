@@ -21,7 +21,7 @@ void cRegistroEstoico::ListarDragonesNODOMADOS()
 	list<cDragon*>::iterator it;
 	for (it = Dragoncitos.begin(); it != Dragoncitos.end(); it++) {
 		if ((*it)->IsDomado() == false) {//verifico que no este domado
-			std::cout << (*it)->toString() << std::endl;
+			std::cout << (*it)->LeerNombreNuevo()<< std::endl;
 		}
 
 	}
@@ -54,7 +54,7 @@ void cRegistroEstoico::ListarJinetes()
 {
 	list<cJinete*>::iterator it;
 	for (it = Jinetitos.begin(); it != Jinetitos.end(); it++) {
-		std::cout << (*it)->toString() << std::endl;
+		std::cout << (*it)->LeerNombre() << std::endl;
 	}
 	return;
 }
@@ -73,6 +73,19 @@ void cRegistroEstoico::ListarVikingos()
 {
 	list<cVikingo*>::iterator it;
 	for (it = Vikinguitos.begin(); it != Vikinguitos.end(); it++) {
+		std::cout << (*it)->LeerNombre() << std::endl;
+	}
+	return;
+}
+
+void cRegistroEstoico::ListarCiudadanos()
+{
+	list<cVikingo*>::iterator it1;
+	for (it1 = Vikinguitos.begin(); it1 != Vikinguitos.end(); it1++) {
+		std::cout << (*it1)->toString() << std::endl;
+	}
+	list<cJinete*>::iterator it;
+	for (it = Jinetitos.begin(); it != Jinetitos.end(); it++) {
 		std::cout << (*it)->toString() << std::endl;
 	}
 	return;

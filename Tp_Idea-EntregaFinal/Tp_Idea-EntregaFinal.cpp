@@ -74,6 +74,9 @@ int main() {
     Isla_Berk->CargarVikingo(vikingo8);
     Isla_Berk->CargarVikingo(vikingo9);
     Isla_Berk->CargarVikingo(vikingo10);
+    Isla_Berk->CargarVikingo(vikingo11);
+    Isla_Berk->CargarVikingo(vikingo12);
+
 
     getchar();
     //comienza la historia
