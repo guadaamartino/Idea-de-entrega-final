@@ -7,7 +7,7 @@ class cJinete
 {
 private:
     string nombre_jinete, apellido_jinete, apodo_jinete;
-    const string FechaNacimiento_jinete;
+    string FechaNacimiento_jinete;
     string Carac_fisicas;
     Resultado resultadoEnEntrenamiento;
     cDragon* dragoncito1;
@@ -29,8 +29,8 @@ public:
     void setNombre(string nombre);
     void setApellido(string apellido);
     void setApodo(string apodo);
-
     void setCaracteristicas(string caracteristicas);
+    void setFechadeNacimiento(string fecha_nacimiento);
     string leerDRAGON(cDragon* dragoncito_asociado);
     int IfJineteDomo();
     cDragon* devolver_PrimerDragon();

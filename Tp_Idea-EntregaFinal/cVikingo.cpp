@@ -1,6 +1,6 @@
 #include "cVikingo.h"
 
-cVikingo::cVikingo(string Nombre, string Apellido, int Magnitud, Resul certificado, string elementoPP)//por defecto por parametros
+cVikingo::cVikingo(string Nombre, string Apellido, int Magnitud, Resul certificado, string elementoPP, string apodo, string caracteristicas, string fecha ):FechadeNacimiento(fecha)//por defecto por parametros
 {
 	Nombre_vikingo = Nombre;
 	Apellido_vikingo = Apellido;
@@ -9,6 +9,9 @@ cVikingo::cVikingo(string Nombre, string Apellido, int Magnitud, Resul certifica
 	cantMuertes_Asociadas = -1; //Negativo pq no mato a ningun dragon aun
 	ResultadoEntrenamiento = certificado;
 	ElementoPP = elementoPP;
+	Apodo_vikingo = apodo;
+	carac_fisicas = caracteristicas;
+
 }
 
 void cVikingo::ContratarVikingo(string Trabajo)//lo contratan
@@ -16,6 +19,7 @@ void cVikingo::ContratarVikingo(string Trabajo)//lo contratan
 	Posicion_vikingo = Trabajo;
 	cout << Nombre_vikingo <<"ha conseguido el trabajo como " << Posicion_vikingo << endl;
 }
+
 
 
 void cVikingo::setMuerteNueva()
@@ -27,6 +31,20 @@ void cVikingo::setMuerteNueva()
 		cantMuertes_Asociadas++;
 	}
 }
+
+void cVikingo::setApodoVikingo(string apodo)
+{
+	Apodo_vikingo = apodo;
+
+}
+
+void cVikingo::setCaracteristicasFisicas(string caracteristicas)
+{
+
+	carac_fisicas = caracteristicas;
+
+}
+
 
 int cVikingo::ReciboDanios(int Golpe)
 {

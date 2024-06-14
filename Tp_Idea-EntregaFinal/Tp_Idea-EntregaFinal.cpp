@@ -47,35 +47,35 @@ int main() {
     jinete1->incorporarPrimerDragon(dragoncito1);
 
     // vikingos 
-    cVikingo* vikingo1 = new cVikingo("Estoico","el Vasto",60000,PRIMERO, "Escudo de metal");
-    cVikingo* vikingo2 = new cVikingo("Patan","Jorgenson",40000,ULTIMO, "Capa termica");
-    cVikingo* vikingo3 = new cVikingo("Astrid", "Hofferson", 60000, ENTRENANDO,"Traje impermeable");
-    cVikingo* vikingo4 = new cVikingo("Brutacio", "Thorston",30000 ,ULTIMO, "Arnes");
-    cVikingo* vikingo5= new cVikingo("Brusca", "Thorston",32000 ,APROBADO, "Gafas antidestellos");
-    cVikingo* vikingo6 = new cVikingo("Fishlegs", "Ingerman",60000 ,ENTRENANDO, "Botas amortiguadas");
-    cVikingo* vikingo7 = new cVikingo("Ragnar", "Lodbrok", 70000, PRIMERO, "Escudo de metal");
-    cVikingo* vikingo8 = new cVikingo("Bjorn", "Ironside", 30000, ULTIMO, "Capa termica");
-    cVikingo* vikingo9 = new cVikingo("Erik ", "Red", 80000, ENTRENANDO, "Traje impermeable");
-    cVikingo* vikingo10 = new cVikingo("Leif", "Erikson", 35000, ULTIMO, "Arnes");
-    cVikingo* vikingo11 = new cVikingo("Olaf", "Hardrada", 39000, APROBADO, "Gafas antidestellos");
-    cVikingo* vikingo12 = new cVikingo("Ingvar", "Stonefist", 750000, ENTRENANDO, "Botas amortiguadas");
+    cVikingo* vikingo1 = new cVikingo("Estoico","el Vasto",60000,PRIMERO, "Escudo de metal", "Esto", "Alto", "18/02/850");
+    cVikingo* vikingo2 = new cVikingo("Patan","Jorgenson",40000,ULTIMO, "Capa termica", "Pa", "Musculoso","08/04/875");
+    cVikingo* vikingo3 = new cVikingo("Astrid", "Hofferson", 60000, ENTRENANDO,"Traje impermeable", "As","Atletica","04/09/878");
+    cVikingo* vikingo4 = new cVikingo("Brutacio", "Thorston",30000 ,ULTIMO, "Arnes", "Bruti", "Delgada","22/11/875");
+    cVikingo* vikingo5= new cVikingo("Brusca", "Thorston",32000 ,APROBADO, "Gafas antidestellos","Brus", "Rubia","22/11/875");
+    cVikingo* vikingo6 = new cVikingo("Fishlegs", "Ingerman",60000 ,ENTRENANDO, "Botas amortiguadas", "Fish","Grande","14/06/876");
+    cVikingo* vikingo7 = new cVikingo("Ragnar", "Lodbrok", 70000, PRIMERO, "Escudo de metal", "Rag", "Fuerte","12/01/785");
+    cVikingo* vikingo8 = new cVikingo("Bjorn", "Ironside", 30000, ULTIMO, "Capa termica", "Bjorn", "Morocho","15/03/790");
+    cVikingo* vikingo9 = new cVikingo("Erik ", "Red", 80000, ENTRENANDO, "Traje impermeable", "Erik", "Agil","22/07/795");
+    cVikingo* vikingo10 = new cVikingo("Leif", "Erikson", 35000, ULTIMO, "Arnes","Le", "Pelirroja","03/10/800");
+    cVikingo* vikingo11 = new cVikingo("Olaf", "Hardrada", 39000, APROBADO, "Gafas antidestellos", "Oli","Grande","27/12/805");
+    cVikingo* vikingo12 = new cVikingo("Ingvar", "Stonefist", 750000, ENTRENANDO, "Botas amortiguadas","Ing", "Alto","09/05/810");
 
     //cargo en isla
-    Isla_Berk->CargarDragon(dragoncito1);
-    Isla_Berk->CargarDragon(dragoncito2);
-    Isla_Berk->CargarJinete(jinete1);
-    Isla_Berk->CargarVikingo(vikingo1);
-    Isla_Berk->CargarVikingo(vikingo2);
-    Isla_Berk->CargarVikingo(vikingo3);
-    Isla_Berk->CargarVikingo(vikingo4);
-    Isla_Berk->CargarVikingo(vikingo5);
-    Isla_Berk->CargarVikingo(vikingo6);
-    Isla_Berk->CargarVikingo(vikingo7);
-    Isla_Berk->CargarVikingo(vikingo8);
-    Isla_Berk->CargarVikingo(vikingo9);
-    Isla_Berk->CargarVikingo(vikingo10);
-    Isla_Berk->CargarVikingo(vikingo11);
-    Isla_Berk->CargarVikingo(vikingo12);
+    *Isla_Berk + dragoncito1;
+    *Isla_Berk + dragoncito2;
+    *Isla_Berk + jinete1;
+    *Isla_Berk + vikingo1;
+    *Isla_Berk + vikingo2;
+    *Isla_Berk + vikingo3;
+    *Isla_Berk + vikingo4;
+    *Isla_Berk + vikingo5;
+    *Isla_Berk + vikingo6;
+    *Isla_Berk + vikingo7;
+    *Isla_Berk + vikingo8;
+    *Isla_Berk + vikingo9;
+    *Isla_Berk + vikingo10;
+    *Isla_Berk + vikingo11;
+    *Isla_Berk + vikingo12;
 
 
     getchar();
@@ -108,6 +108,7 @@ int main() {
     //set resto de los atributos y dragones
     cJinete* jinete3 = new cJinete();
     Isla_Berk->VikingoAJinete(2, jinete3);
+    Isla_Berk->ListarCiudadanos();
     //set resto de los atributos y dragones
     
     getchar();

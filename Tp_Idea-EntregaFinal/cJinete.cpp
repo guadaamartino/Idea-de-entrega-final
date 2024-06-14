@@ -1,13 +1,14 @@
 #include "cJinete.h"
 #include "cDragon.h"
 
-cJinete::cJinete(string nombre, string apellido, string apodo, string fecha_nacimiento, string caracteristicas, Resultado certificado):FechaNacimiento_jinete(fecha_nacimiento)
+cJinete::cJinete(string nombre, string apellido, string apodo, string fecha_nacimiento, string caracteristicas, Resultado certificado)
 {
     nombre_jinete = nombre;
     apellido_jinete = apellido;
     apodo_jinete = apodo;
     Carac_fisicas = caracteristicas;
     resultadoEnEntrenamiento = certificado;
+    FechaNacimiento_jinete = fecha_nacimiento;
     dragoncito1 = nullptr;
     dragoncito2 = nullptr;
 }
@@ -55,6 +56,11 @@ void cJinete::setApodo(string apodo) {
 void cJinete::setCaracteristicas(string caracteristicas) {
     Carac_fisicas = caracteristicas;
 
+}
+
+void cJinete::setFechadeNacimiento(string fecha_nacimiento)
+{
+    FechaNacimiento_jinete = fecha_nacimiento;
 }
 
 Resultado cJinete::LeerResultadoEntrenamiento() {

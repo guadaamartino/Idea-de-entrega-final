@@ -6,13 +6,21 @@ cRegistroEstoico::cRegistroEstoico()
 	//inician todas en 0
 }
 
-void cRegistroEstoico::CargarDragon(cDragon* dragoncito)
-{
+void cRegistroEstoico::operator+(cDragon* dragoncito) {
 	if (dragoncito != nullptr) {
 		Dragoncitos.push_back(dragoncito);
 	}
 	else {
 		return;//no se carga
+	}
+}
+
+void cRegistroEstoico::operator-(cDragon* quito_dragon) {
+	for (list<cDragon*>::iterator it = Dragoncitos.begin(); it != Dragoncitos.end(); ++it) {
+		if (*it == quito_dragon) {
+			Dragoncitos.erase(it);
+			break;
+		}
 	}
 }
 
@@ -40,13 +48,22 @@ void cRegistroEstoico::ListarDragones()
 	return;
 }
 
-void cRegistroEstoico::CargarJinete(cJinete* jinetito)
-{
+void cRegistroEstoico::operator+(cJinete* jinetito) {
 	if (jinetito != nullptr) {
 		Jinetitos.push_back(jinetito);
 	}
 	else {
 		return; //no se carga
+	}
+}
+
+
+void cRegistroEstoico::operator-(cJinete* quito_jinete) {
+	for (list<cJinete*>::iterator it = Jinetitos.begin(); it != Jinetitos.end(); ++it) {
+		if (*it == quito_jinete) {
+			Jinetitos.erase(it);
+			break;
+		}
 	}
 }
 
@@ -59,8 +76,8 @@ void cRegistroEstoico::ListarJinetes()
 	return;
 }
 
-void cRegistroEstoico::CargarVikingo(cVikingo* vikinguito)
-{
+
+void cRegistroEstoico::operator+(cVikingo* vikinguito) {
 	if (vikinguito != nullptr) {
 		Vikinguitos.push_back(vikinguito);
 	}
@@ -128,6 +145,10 @@ void cRegistroEstoico::VikingoAJinete(int index, cJinete* jineteNuevo)
 	jineteNuevo->setApellido(vikingo->LeerApellido());
 	jineteNuevo->incorporarPrimerDragon(nullptr);
 	jineteNuevo->incorporarSegundoDragon(nullptr);//se asigna desp
+	jineteNuevo->setApodo(vikingo->LeerApodo());
+	jineteNuevo->setCaracteristicas(vikingo->LeerCaracteristicas());
+	jineteNuevo->setFechadeNacimiento(vikingo->LeerFechadeNacimiento());
+
 	int Resul = rand() % 2;//entre 0 y 1
 	if(Resul==0)
 	  jineteNuevo->setResultadoEntrenamiento(NO_ASISTIO);

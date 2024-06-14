@@ -11,12 +11,15 @@ class cRegistroEstoico
 	list <cJinete*> Jinetitos;
 	list <cVikingo*> Vikinguitos;
 public:
-    cRegistroEstoico();//por defecto
+    cRegistroEstoico();
+    
+    //por defecto
 
     //agregar a las listas. REEMPLAZAR POR SOBRECARGA +
-    void CargarDragon(cDragon* dragoncito);
-    void CargarJinete(cJinete* jinetito);
-    void CargarVikingo(cVikingo* vikinguito);
+    void operator+(cDragon* dragoncito);
+    void operator+(cJinete* jinetito);
+    void operator+(cVikingo* vikinguito);
+ 
   
     //listar
     void ListarDragonesNODOMADOS();
