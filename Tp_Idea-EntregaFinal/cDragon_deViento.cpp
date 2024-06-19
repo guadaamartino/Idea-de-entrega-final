@@ -6,4 +6,4 @@ cDragon_deViento::cDragon_deViento(string Tamanio, string Color, int MagnitudVid
 
 
 string cDragon_deViento::Caracteristica_Dragon = "Controla viento";
-string cDragon_deViento::Debilidad_Dragon = "Arnes con anclaje";
+string cDragon_deViento::Debilidad_Dragon = "Arnes";
