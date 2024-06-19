@@ -128,8 +128,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="cDragon.cpp" />
+    <ClCompile Include="cDragon_deAgua.cpp" />
     <ClCompile Include="cDragon_deFuego.cpp" />
     <ClCompile Include="cDragon_deHielo.cpp" />
+    <ClCompile Include="cDragon_deLuz.cpp" />
+    <ClCompile Include="cDragon_deTierra.cpp" />
+    <ClCompile Include="cDragon_deViento.cpp" />
     <ClCompile Include="cEntrenamiento.cpp" />
     <ClCompile Include="cFormadeAtaque.cpp" />
     <ClCompile Include="cFormaDefensa.cpp" />
@@ -140,8 +144,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="cDragon.h" />
+    <ClInclude Include="cDragon_deAgua.h" />
     <ClInclude Include="cDragon_deFuego.h" />
     <ClInclude Include="cDragon_deHielo.h" />
+    <ClInclude Include="cDragon_deLuz.h" />
+    <ClInclude Include="cDragon_deTierra.h" />
+    <ClInclude Include="cDragon_deViento.h" />
     <ClInclude Include="cEntrenamiento.h" />
     <ClInclude Include="cFormadeAtaque.h" />
     <ClInclude Include="cFormaDefensa.h" />

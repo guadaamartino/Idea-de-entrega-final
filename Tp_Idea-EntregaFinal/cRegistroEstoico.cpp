@@ -312,6 +312,7 @@ void cRegistroEstoico::BatallaFinal(cDragon* Reina)
 			std::cout << "Los sobrevientes fueron:" << endl;
 			ListarCiudadanos();
 			ListarDragones();
+
 			return;
 		}
 	}
