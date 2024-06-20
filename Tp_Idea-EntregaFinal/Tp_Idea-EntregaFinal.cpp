@@ -115,8 +115,8 @@ int main() {
     cJinete* jinete2 = new cJinete();
     cJinete* jinete3 = new cJinete();
     try {
-     Isla_Berk->VikingoAJinete(1, jinete2);
-     Isla_Berk->VikingoAJinete(1, jinete3);//porq patan ya no es vikingo
+     Isla_Berk->VikingoAJinete(1, jinete2);//el q queda abajo de estoico
+     Isla_Berk->VikingoAJinete(1, jinete3);//el q queda abajo de estoico
     }
     catch (const exception * e) {
         cerr << e->what() << endl;
@@ -144,8 +144,18 @@ int main() {
     getchar();
     std::cout<< "Hipo: Deja que nuestros dragones peleen la proxima vez que nos ataquen y veras." << std::endl;
     
-    //se suman 2 jinetes 
-
+    cJinete* jinete4 = new cJinete();
+    cJinete* jinete5 = new cJinete();
+    try {
+        Isla_Berk->VikingoAJinete(1, jinete4);//el q queda abajo de estoico
+        Isla_Berk->VikingoAJinete(1, jinete5);//el que queda abajo de estoico
+    }
+    catch (const exception* e) {
+        cerr << e->what() << endl;
+    }
+    getchar();
+    std::cout << "Hipo: Gracias " << jinete4->LeerNombre() << " y " << jinete5->LeerNombre() << " por unirse conmigo " << std::endl;
+    getchar();
     std::cout << "Hemos detectado el ingreso de dragones a la isla. Ellos son: " << std::endl;  //leer dragones (solo no domados)
     Isla_Berk->ListarDragonesNODOMADOS();
     getchar();
@@ -197,6 +207,8 @@ int main() {
    delete jinete1;
    delete jinete2;
    delete jinete3;
+   delete jinete4;
+   delete jinete5;
   //Libero vikingos
    delete vikingo1;
    delete vikingo2;
