@@ -6,6 +6,10 @@
 #include "cFormaDefensa.h"
 #include "cDragon_deFuego.h"
 #include "cDragon_deHielo.h"
+#include "cDragon_deAgua.h"
+#include "cDragon_deLuz.h"
+#include "cDragon_deTierra.h"
+#include "cDragon_deViento.h"
 #include "cJinete.h"
 #include "cVikingo.h"
 #include "cRegistroEstoico.h"
@@ -23,7 +27,7 @@ int main() {
     cEntrenamiento* defensa1 = new cFormaDefensa();
     ataque1->SetMyEstrategia("fuego");
     defensa1->SetMyEstrategia("escamas");
-    cDragon *dragoncito1=new cDragon_deFuego("Pequenio", "Negro", 30200);
+    cDragon *dragoncito1=new cDragon_deFuego("Pequenio", "Negro", 90200);
     dragoncito1->AltaNombre("Chistar", "murmurar");
     dragoncito1->SetEstadoDragon(1);//esta domado
     try {
@@ -34,28 +38,36 @@ int main() {
         cerr << e->what() << endl;
     }
     
-    cEntrenamiento* ataque2 = new cFormadeAtaque();
-    cEntrenamiento* defensa2 = new cFormaDefensa();
-    ataque2->SetMyEstrategia("hielo");
-    defensa2->SetMyEstrategia("velocidad");
+   
     cDragon* dragoncito2 = new cDragon_deHielo("Mediano", "Verde", 10);
     dragoncito2->AltaNombre("Nadar", "dibujar");
     dragoncito2->SetEstadoDragon(0);//no esta domado
 
-    cEntrenamiento* ataque3 = new cFormadeAtaque();
-    cEntrenamiento* defensa3 = new cFormaDefensa();
-    ataque2->SetMyEstrategia("fuego");
-    defensa2->SetMyEstrategia("invisibilidad");
-    cDragon* dragoncito3 = new cDragon_deFuego("Chico", "Marron", 300000200);
+    cDragon* dragoncito3 = new cDragon_deFuego("Chico", "Marron", 300200);
     dragoncito3->AltaNombre("Cantar", "imaginar");
     dragoncito3->SetEstadoDragon(0);//no esta domado
+
+    cDragon* dragoncito4 = new cDragon_deAgua("Grande", "Rojo", 4000);
+    dragoncito4->AltaNombre("Gritar", "andar");
+    dragoncito4->SetEstadoDragon(0);//no esta domado
+
+    cDragon* dragoncito5 = new cDragon_deLuz("Grande", "Gris", 91000);
+    dragoncito5->AltaNombre("Bucear", "rimar");
+    dragoncito5->SetEstadoDragon(0);//no esta domado
+   
+    cDragon* dragoncito6 = new cDragon_deTierra("Chico", "Rosa", 60000);
+    dragoncito6->AltaNombre("Morder", "susurrar");
+    dragoncito6->SetEstadoDragon(0);//no esta domado
+  
+  
+  
     
     // jinetes
     cJinete* jinete1 = new cJinete("Hiccup","Horrendous Haddock III","Hipo","4/2/1010","Ojos verdes",DESAPROBADO); //unico jinete en principio
     jinete1->incorporarPrimerDragon(dragoncito1);
 
     // vikingos 
-    cVikingo* vikingo1 = new cVikingo("Estoico","el Vasto",60000,PRIMERO, "Escudo de metal", "Esto", "Alto", "18/02/850");
+    cVikingo* vikingo1 = new cVikingo("Estoico","el Vasto",600000,PRIMERO, "Escudo de metal", "Esto", "Alto", "18/02/850");
     cVikingo* vikingo2 = new cVikingo("Patan","Jorgenson",40000,ULTIMO, "Capa termica", "Pa", "Musculoso","08/04/875");
     cVikingo* vikingo3 = new cVikingo("Astrid", "Hofferson", 60000, ENTRENANDO,"Traje impermeable", "As","Atletica","04/09/878");
     cVikingo* vikingo4 = new cVikingo("Brutacio", "Thorston",1 ,ULTIMO, "Arnes", "Bruti", "Delgada","22/11/875");
@@ -72,6 +84,9 @@ int main() {
     *Isla_Berk + dragoncito1;
     *Isla_Berk + dragoncito2;
     *Isla_Berk + dragoncito3;
+    *Isla_Berk + dragoncito4;
+    *Isla_Berk + dragoncito5;
+    *Isla_Berk + dragoncito6;
     *Isla_Berk + jinete1;
     *Isla_Berk + vikingo1;
     *Isla_Berk + vikingo2;
@@ -111,7 +126,58 @@ int main() {
     getchar();
     std::cout << "Lastimosamente hipo no ha convencido a su padre, pero... nuevos jinetes han aparecido para sumarse con Hipo!" << std::endl;
     
+    //dragones nuevos domados
+    cEntrenamiento* ataque2 = new cFormadeAtaque();
+    cEntrenamiento* defensa2 = new cFormaDefensa();
+    ataque2->SetMyEstrategia("agua");
+    defensa2->SetMyEstrategia("volar");
+    cDragon* dragoncito7 = new cDragon_deAgua("Grande", "Violeta", 60200);
+    dragoncito7->AltaNombre("Rugir", "girar");
+    dragoncito7->SetEstadoDragon(1);//esta domado
+    try {
+        dragoncito7->setEstrategiaAtaque(ataque2);
+        dragoncito7->setEstrategiaDefensa(defensa2);
+    }
+    catch (const exception* e) {
+        cerr << e->what() << endl;
+    }
 
+    cEntrenamiento* ataque3 = new cFormadeAtaque();
+    cEntrenamiento* defensa3 = new cFormaDefensa();
+    ataque3->SetMyEstrategia("luz");
+    defensa3->SetMyEstrategia("morder");
+    cDragon* dragoncito8 = new cDragon_deLuz("Grande", "Multicolor", 35200);
+    dragoncito8->AltaNombre("Matar", "inventar");
+    dragoncito8->SetEstadoDragon(1);//esta domado
+    try {
+        dragoncito8->setEstrategiaAtaque(ataque3);
+        dragoncito8->setEstrategiaDefensa(defensa3);
+    }
+    catch (const exception* e) {
+        cerr << e->what() << endl;
+    }
+
+    cEntrenamiento* ataque4 = new cFormadeAtaque();
+    cEntrenamiento* defensa4 = new cFormaDefensa();
+    ataque4->SetMyEstrategia("viento");
+    defensa4->SetMyEstrategia("rajuniar");
+    cDragon* dragoncito9 = new cDragon_deViento("Grande", "Bordo", 40200);
+    dragoncito9->AltaNombre("Comer", "patear");
+    dragoncito9->SetEstadoDragon(1);//esta domado
+    try {
+        dragoncito9->setEstrategiaAtaque(ataque4);
+        dragoncito9->setEstrategiaDefensa(defensa4);
+    }
+    catch (const exception* e) {
+        cerr << e->what() << endl;
+    }
+
+    //cargo en isla
+    *Isla_Berk + dragoncito7;
+    *Isla_Berk + dragoncito8;
+    *Isla_Berk + dragoncito9;
+
+    //incorporo a jinetes
     cJinete* jinete2 = new cJinete();
     cJinete* jinete3 = new cJinete();
     try {
@@ -121,14 +187,14 @@ int main() {
     catch (const exception * e) {
         cerr << e->what() << endl;
     }
-    
-   
-   
+    jinete2->incorporarPrimerDragon(dragoncito7);
+    jinete3->incorporarPrimerDragon(dragoncito8);
+    jinete3->incorporarSegundoDragon(dragoncito9);
     
     getchar();
     std::cout << "Hipo: Gracias " << jinete2->LeerNombre()<<" y "<<jinete3->LeerNombre()<<" por unirse conmigo "<<std::endl;
     
-    //crear dragona reina
+    //creo dragona reina
     cDragon* MuerteVerde = new cDragon("Grande","Verde",10000);
     MuerteVerde->AltaNombreReina("Muerte Verde");
 
@@ -144,6 +210,39 @@ int main() {
     getchar();
     std::cout<< "Hipo: Deja que nuestros dragones peleen la proxima vez que nos ataquen y veras." << std::endl;
     
+    cEntrenamiento* ataque5 = new cFormadeAtaque();
+    cEntrenamiento* defensa5 = new cFormaDefensa();
+    ataque5->SetMyEstrategia("hielo");
+    defensa5->SetMyEstrategia("volar");
+    cDragon* dragoncito10 = new cDragon_deHielo("Chico", "Beige", 31200);
+    dragoncito10->AltaNombre("Escupir", "helar");
+    dragoncito10->SetEstadoDragon(1);//esta domado
+    try {
+        dragoncito10->setEstrategiaAtaque(ataque5);
+        dragoncito10->setEstrategiaDefensa(defensa5);
+    }
+    catch (const exception* e) {
+        cerr << e->what() << endl;
+    }
+
+    cEntrenamiento* ataque6 = new cFormadeAtaque();
+    cEntrenamiento* defensa6 = new cFormaDefensa();
+    ataque6->SetMyEstrategia("fuego");
+    defensa6->SetMyEstrategia("envenenar");
+    cDragon* dragoncito11 = new cDragon_deFuego("Pequenio", "Negro", 30200);
+    dragoncito11->AltaNombre("Dormir", "manipular");
+    dragoncito11->SetEstadoDragon(1);//esta domado
+    try {
+        dragoncito11->setEstrategiaAtaque(ataque6);
+        dragoncito11->setEstrategiaDefensa(defensa6);
+    }
+    catch (const exception* e) {
+        cerr << e->what() << endl;
+    }
+    //cargo en isla
+    *Isla_Berk + dragoncito10;
+    *Isla_Berk + dragoncito11;
+
     cJinete* jinete4 = new cJinete();
     cJinete* jinete5 = new cJinete();
     try {
@@ -153,6 +252,9 @@ int main() {
     catch (const exception* e) {
         cerr << e->what() << endl;
     }
+    jinete4->incorporarPrimerDragon(dragoncito10);
+    jinete5->incorporarPrimerDragon(dragoncito11);
+
     getchar();
     std::cout << "Hipo: Gracias " << jinete4->LeerNombre() << " y " << jinete5->LeerNombre() << " por unirse conmigo " << std::endl;
     getchar();
@@ -167,6 +269,8 @@ int main() {
     std::cout << "Uno de los dragones ha querido matar a Estoico, pero gracias a Chimuelo ha sobrevivido" << std::endl;
     getchar();
     std::cout<< "Hipo llora por el estado de Chimuelo y pide por favor que lo curen" << std::endl;
+    getchar();
+    std::cout << "Llamando al medico..." << std::endl;
 
     try{
       Isla_Berk->RealizarCuracion(dragoncito1); //llamar a funcion friend curandero de dragon que permite sumar 20000 a la vida del dragon
@@ -174,8 +278,6 @@ int main() {
     catch (const exception* e) {
         cerr << e->what() << endl;
     }
-
- 
 
     getchar();
     std::cout << "Estoico: Hipo, lo siento mucho tenias razon... Unamonos en contra de Muerte Verde!" << std:: endl;
@@ -194,14 +296,19 @@ int main() {
   //Libero la memoria de los entrenamientos 
    delete ataque1;
    delete defensa1;
-   delete ataque2;
-   delete defensa2;
-   delete ataque3;
-   delete defensa3;
+ 
   //Libero del dragon
    delete dragoncito1;
    delete dragoncito2;
    delete dragoncito3;
+   delete dragoncito4;
+   delete dragoncito5;
+   delete dragoncito6;
+   delete dragoncito7;
+   delete dragoncito8;
+   delete dragoncito9;
+   delete dragoncito10;
+   delete dragoncito11;
    delete MuerteVerde;
   //Librero jinetes
    delete jinete1;
