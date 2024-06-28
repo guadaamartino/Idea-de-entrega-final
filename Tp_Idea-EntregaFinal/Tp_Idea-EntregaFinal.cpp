@@ -202,7 +202,7 @@ int main() {
     getchar();
     std::cout << "Hipo: Oh no! Los dragones malos estan manejados por una reina... ella es " << MuerteVerde->LeerNombreNuevo()<<std::endl;
     getchar();
-    std::cout << "Astrid: Hay que convencer a los vikingos a unirse y luchar todos contra ella. Hipo y Patapez, vayamos a hablar con Estoico" << endl;
+    std::cout << jinete2->LeerNombre() << ": Hay que convencer a los vikingos a unirse y luchar todos contra ella. Vayamos a hablar con Estoico" << endl;
     getchar();
     std::cout << "Charla en proceso..." << std::endl;
     getchar();
@@ -288,6 +288,7 @@ int main() {
     std::cout << "Entrenando dragones..." << std::endl;
     getchar();
     std::cout << "Ha llegado la hora, debemos luchar contra Muerte Verde. " << std::endl;
+    getchar();
     Isla_Berk->BatallaFinal(MuerteVerde);
 
    
